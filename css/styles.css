@@ -222,4 +222,7 @@ h1, h2 {
 .quiz-cta .btn-light:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-} 
+}
+
+/* Import Quiz Styles */
+@import 'quiz.css';
