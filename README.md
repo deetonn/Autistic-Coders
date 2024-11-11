@@ -42,14 +42,95 @@ This project creates an accessible and informative platform that:
 - Bootstrap 5.3
 - Google Fonts
 
+## Technical Implementation Details
+
+### HTML Components
+- Semantic structure using HTML5 elements:
+  - `<header>` for hero section
+  - `<nav>` for navigation
+  - `<main>` for primary content
+  - `<section>` for content grouping
+  - `<article>` for pioneer profiles
+  - `<blockquote>` for testimonials
+
+### CSS Features
+- Custom Properties (CSS Variables):
+  ```css
+  :root {
+    --primary-color: #3498db;
+    --accent-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+  }
+  ```
+
+- Gradient Backgrounds:
+  ```css
+  .hero-section {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  }
+  ```
+
+- Card Animations:
+  ```css
+  .trait-card {
+    transition: transform 0.3s ease;
+  }
+  .trait-card:hover {
+    transform: translateY(-5px);
+  }
+  ```
+
+### Bootstrap Classes Used
+- Layout:
+  - `.container` for centered content
+  - `.row` and `.col-*` for grid system
+  - `.g-4` for grid gutters
+- Components:
+  - `.navbar` and `.navbar-*` for navigation
+  - `.card` for content boxes
+  - `.display-4` for hero text
+  - `.lead` for emphasized paragraphs
+
+### Responsive Breakpoints
+```css
+/* Mobile First Approach */
+/* Base styles for mobile */
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+    .trait-card {
+        padding: 2rem;
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+    .hero-section {
+        padding: 5rem 0;
+    }
+}
+```
+
+### Accessibility Implementation
+- ARIA labels where needed
+- Semantic HTML structure
+- Color contrast ratios:
+  - Normal text: minimum 4.5:1
+  - Large text: minimum 3:1
+- Focus states for interactive elements
+- Responsive text sizing
+
 ## File Structure
 
+```
 project/
 │
 ├── index.html # Main homepage
 ├── css/
 │ └── styles.css # Custom styling
 └── README.md # Project documentation
+```
 
 
 ## Accessibility Features
