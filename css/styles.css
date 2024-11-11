@@ -47,4 +47,31 @@ body {
 
 .nav-link:hover {
     color: #1abc9c;
+}
+
+.trait-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.trait-title {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.blockquote {
+    border-left: 4px solid #1abc9c;
+    font-style: italic;
+}
+
+.blockquote-footer {
+    color: #6c757d;
+}
+
+.programming-traits {
+    max-width: 900px;
+    margin: 0 auto;
 } 
