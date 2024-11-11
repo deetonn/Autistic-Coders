@@ -1,9 +1,9 @@
 /* Quiz Page Specific Styles */
 .question-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 15px;
     padding: 2.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: var(--card-shadow);
     margin-bottom: 2rem;
     max-width: 800px;
     margin: 0 auto;
@@ -11,24 +11,24 @@
 
 .question-text {
     font-size: 1.4rem;
-    color: var(--dark-color);
+    color: var(--text-color);
     margin-bottom: 1.5rem;
     font-weight: 600;
     text-align: left;
 }
 
 .code-block {
-    background: #1e1e1e;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
     position: relative;
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
 }
 
 .code-block pre {
     margin: 0;
-    color: #d4d4d4;
+    color: var(--text-color);
     font-size: 1.4rem;
     font-family: 'Consolas', monospace;
     line-height: 1.6;
@@ -38,54 +38,67 @@
     padding: 1.2rem;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    border: 2px solid #e9ecef;
-    background: white;
+    border: 2px solid var(--border-color);
+    background: var(--card-bg);
     margin-bottom: 1rem;
     text-align: left;
     border-radius: 8px;
-    color: #2c3e50;
+    color: var(--text-color);
 }
 
 .answer-btn:hover {
     transform: translateY(-2px);
     border-color: var(--primary-color);
-    background-color: #f8f9fa;
-    color: #2c3e50;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: var(--card-shadow);
 }
 
 .answer-btn.correct {
     background-color: #2ecc71;
     color: white !important;
-    border-color: #2ecc71;
+    border-color: var(--primary-color);
 }
 
 .answer-btn.incorrect {
     background-color: #e74c3c;
     color: white !important;
-    border-color: #e74c3c;
+    border-color: var(--primary-color);
 }
 
 .explanation {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
+    background: var(--card-bg);
+    color: var(--text-color);
     padding: 2rem;
     margin-top: 2rem;
     border-radius: 15px;
     font-size: 1.1rem;
     line-height: 1.6;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add decorative gradient accent */
+.explanation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--header-bg);
 }
 
 .explanation-title {
-    color: #fff;
+    color: var(--text-color);
     font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .explanation-title::before {
@@ -94,24 +107,24 @@
 }
 
 .explanation p {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
 .explanation strong {
-    color: #fff;
+    color: var(--text-color);
     font-weight: 700;
 }
 
 .explanation ol {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-secondary);
     padding: 1.5rem 1.5rem 1.5rem 3rem;
     border-radius: 10px;
     margin: 1rem 0;
 }
 
 .explanation li {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
     margin-bottom: 0.5rem;
     padding-left: 0.5rem;
 }
@@ -123,7 +136,19 @@
 .explanation .mt-3 {
     margin-top: 1.5rem !important;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Links within explanation */
+.explanation a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+}
+
+.explanation a:hover {
+    color: var(--gradient-end);
+    text-decoration-color: var(--gradient-end);
 }
 
 /* Add a fun animation when explanation appears */
@@ -144,9 +169,9 @@
 
 /* Style any links in the explanation */
 .explanation a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.5);
+    text-decoration-color: var(--border-color);
 }
 
 .explanation a:hover {
@@ -157,7 +182,7 @@
 .quiz-progress {
     margin-bottom: 2rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg);
     border-radius: 8px;
 }
 
@@ -170,9 +195,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--border-color);
     border: none;
-    color: #fff;
+    color: var(--text-color);
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -181,7 +206,7 @@
 }
 
 .copy-button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--border-color);
 }
 
 .answer-btn.correct:hover,
@@ -225,44 +250,33 @@
 }
 
 /* Code Playground Styling */
-.try-it-yourself {
-    background: #1e1e1e;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-.try-it-title {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
 .code-playground {
-    background: #2d2d2d;
+    background: var(--bg-secondary);
     border-radius: 8px;
     padding: 1rem;
+    margin-top: 1rem;
 }
 
 .code-editor {
-    background: #1e1e1e;
+    background: var(--code-bg, #1e1e1e);
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .code-editor pre {
     margin: 0;
-    color: #d4d4d4;
-    font-family: 'Consolas', monospace;
-    min-height: 60px;
+    white-space: pre-wrap;
+    font-family: 'Consolas', 'Monaco', monospace;
+    color: var(--code-text, #d4d4d4);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-.code-editor pre:focus {
-    outline: 1px solid #454545;
+.code-editor code {
+    display: block;
+    outline: none;
 }
 
 .run-code-btn {
@@ -272,15 +286,15 @@
     cursor: pointer;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #2ecc71;
+    background-color: var(--primary-color);
     border: none;
-    color: white;
+    color: var(--text-color);
     border-radius: 6px;
     transition: all 0.3s ease;
 }
 
 .run-code-btn:hover {
-    background-color: #27ae60;
+    background-color: var(--primary-color);
     transform: translateY(-1px);
 }
 
@@ -289,31 +303,57 @@
 }
 
 .code-output {
-    background: #1e1e1e;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1rem;
-    margin-top: 1rem;
 }
 
 .output-title {
-    color: #569cd6;
-    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .output-content {
-    color: #d4d4d4;
+    color: var(--text-color);
+    background: var(--bg-color);
     margin: 0;
-    min-height: 24px;
-    font-family: 'Consolas', monospace;
-    padding: 1rem;
-    background: #2d2d2d;
-    border-radius: 4px;
-    line-height: 1.4;
-    font-size: 1.1rem;
+    white-space: pre-wrap;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
 }
 
-.output-content span {
-    font-family: 'Consolas', monospace;
+/* Quiz text colors */
+.quiz-card h3,
+.quiz-card h4 {
+    color: var(--text-color);
+}
+
+.quiz-card p,
+.quiz-instructions {
+    color: var(--text-secondary);
+}
+
+.question-text,
+.answer-explanation {
+    color: var(--text-color);
+}
+
+/* Code examples */
+.code-example {
+    background: var(--bg-secondary);
+    color: var(--text-color);
+}
+
+/* Add these variables to theme.css */
+:root {
+    --code-bg: #1e1e1e;
+    --code-text: #d4d4d4;
+}
+
+[data-theme="dark"] {
+    --code-bg: #1e1e1e;
+    --code-text: #d4d4d4;
 }
  

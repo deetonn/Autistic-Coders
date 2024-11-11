@@ -1,0 +1,85 @@
+/* Theme Variables */
+:root {
+    /* Light theme (default) */
+    --primary-color: #3498db;
+    --dark-color: #2c3e50;
+    --gradient-start: #2c3e50;
+    --gradient-end: #3498db;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --navbar-bg: #ffffff;
+    --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --header-bg: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    --header-text: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --primary-color: #3498db;
+    --dark-color: #ecf0f1;
+    --gradient-start: #1a1a1a;
+    --gradient-end: #2980b9;
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --navbar-bg: #1a1a1a;
+    --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --header-bg: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    --header-text: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth transitions for theme changes */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme toggle specific styles */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.theme-toggle:hover {
+    background: var(--border-color);
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.theme-toggle .light-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.theme-toggle .dark-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+[data-theme="dark"] .theme-toggle .light-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+[data-theme="dark"] .theme-toggle .dark-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+} 
