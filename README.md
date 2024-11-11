@@ -22,3 +22,24 @@ This project aims to create an accessible and inclusive platform that helps peop
 - JavaScript (for interactive features)
 
 ## Project Structure
+
+### Pages
+- `index.html` - Home page featuring:
+  - Navigation menu
+  - Hero section with welcome message
+  - Introduction to neurodiversity in tech
+  - Profiles of notable autistic tech pioneers
+
+### Styling
+- `css/styles.css` - Custom styles for:
+  - Sensory-friendly color scheme
+  - Smooth transitions and animations
+  - Responsive layout adjustments
+  - Enhanced readability
+
+## Accessibility Features
+- High contrast text
+- Clear navigation structure
+- Smooth visual transitions
+- Responsive design for all devices
+- Semantic HTML structure
