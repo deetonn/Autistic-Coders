@@ -159,4 +159,40 @@ h1, h2 {
 .lead {
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+.spotlight-card {
+    border-left: 4px solid #3498db;
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.05), transparent);
+}
+
+.blockquote-sm {
+    font-size: 0.95rem;
+    font-style: italic;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #34495e;
+}
+
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.achievement-badge {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Update the layout for better responsiveness */
+@media (max-width: 768px) {
+    .spotlight-card {
+        margin-bottom: 2rem;
+    }
 } 
