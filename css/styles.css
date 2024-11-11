@@ -1,24 +1,12 @@
-:root {
-    --primary-color: #3498db;    /* A calming blue */
-    --accent-color: #2ecc71;     /* A soft green */
-    --dark-color: #2c3e50;       /* Deep blue-gray */
-    --light-color: #ecf0f1;      /* Soft gray-white */
-    --gradient-start: #3498db;
-    --gradient-end: #2ecc71;
-    --card-shadow: 0 8px 30px rgba(0,0,0,0.12);
-    --hover-transform: translateY(-8px);
-
-    /* Font families */
-    --body-font: 'Lexend', sans-serif;
-    --heading-font: 'Lexend', sans-serif;
-}
+@import 'theme.css';
 
 /* Custom styles */
 .hero-section {
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background: var(--header-bg);
     padding: 6rem 0;
     position: relative;
     overflow: hidden;
+    color: var(--header-text);
 }
 
 .hero-section::before {
@@ -26,7 +14,7 @@
     position: absolute;
     width: 300px;
     height: 300px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--border-color);
     border-radius: 50%;
     top: -150px;
     right: -150px;
@@ -38,7 +26,7 @@
     position: absolute;
     width: 200px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--border-color);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     bottom: -100px;
     left: -100px;
@@ -67,13 +55,13 @@
 .card {
     transition: transform 0.2s;
     border: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    background-color: #fff;
+    box-shadow: var(--card-shadow);
+    background-color: var(--card-bg);
     padding: 1rem;
 }
 
 .card-title {
-    color: #2c3e50;
+    color: var(--text-color);
     font-weight: 600;
 }
 
@@ -83,9 +71,9 @@
 
 /* Ensuring good contrast and readability */
 body {
-    color: #333;
+    color: var(--text-color);
     line-height: 1.8;
-    background-color: #fafafa;
+    background-color: var(--bg-color);
     padding-top: 76px;
     font-family: var(--body-font);
     font-weight: 400;
@@ -93,35 +81,35 @@ body {
 
 /* Making sure links are clearly visible */
 .nav-link {
-    color: #2c3e50;
+    color: var(--text-color);
     font-weight: 500;
 }
 
 .nav-link:hover {
-    color: #1abc9c;
+    color: var(--primary-color);
 }
 
 .trait-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 15px;
     padding: 2rem;
     height: 100%;
     box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
-    border: 1px solid rgba(52, 152, 219, 0.1);
+    border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
 }
 
 .trait-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    box-shadow: var(--card-shadow);
 }
 
 .trait-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background: var(--header-bg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -129,13 +117,13 @@ body {
 
 .trait-title {
     font-size: 1.3rem;
-    color: var(--dark-color);
+    color: var(--text-color);
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .trait-card p {
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 0;
     font-weight: 400;
@@ -143,13 +131,14 @@ body {
 }
 
 .blockquote {
-    background: var(--light-color);
-    border-left: 5px solid var(--accent-color);
+    background: var(--bg-secondary);
+    border-left: 5px solid var(--primary-color);
     padding: 2rem;
     border-radius: 10px;
     font-style: italic;
     margin: 2rem 0;
     position: relative;
+    color: var(--text-color);
 }
 
 .blockquote::before {
@@ -158,11 +147,11 @@ body {
     position: absolute;
     top: -10px;
     left: 10px;
-    color: rgba(46, 204, 113, 0.2);
+    color: var(--border-color);
 }
 
 .blockquote-footer {
-    color: var(--dark-color);
+    color: var(--text-color);
     font-weight: 500;
     margin-top: 1rem;
 }
@@ -174,15 +163,15 @@ body {
 }
 
 /* Card animations for different traits */
-.trait-card:nth-child(1) { border-top-color: #3498db; }
-.trait-card:nth-child(2) { border-top-color: #2ecc71; }
-.trait-card:nth-child(3) { border-top-color: #e74c3c; }
-.trait-card:nth-child(4) { border-top-color: #f1c40f; }
+.trait-card:nth-child(1) { border-top-color: var(--primary-color); }
+.trait-card:nth-child(2) { border-top-color: var(--gradient-end); }
+.trait-card:nth-child(3) { border-top-color: var(--primary-color); }
+.trait-card:nth-child(4) { border-top-color: var(--gradient-end); }
 
 /* Navbar styling */
 .navbar {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: var(--navbar-bg);
+    box-shadow: var(--navbar-shadow);
     padding: 1rem 0;
     transition: all 0.3s ease;
     position: fixed;
@@ -193,7 +182,7 @@ body {
 }
 
 .navbar.scrolled {
-    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    box-shadow: var(--navbar-shadow);
 }
 
 .navbar-brand {
@@ -202,7 +191,7 @@ body {
     gap: 0.5rem;
     font-weight: 600;
     font-size: 1.4rem;
-    color: var(--dark-color);
+    color: var(--text-color);
     font-family: var(--heading-font);
 }
 
@@ -211,7 +200,7 @@ body {
 }
 
 .brand-text {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    background: var(--header-bg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -221,7 +210,7 @@ body {
 }
 
 .nav-link {
-    color: var(--dark-color) !important;
+    color: var(--text-color) !important;
     font-weight: 500;
     padding: 0.5rem 1rem !important;
     border-radius: 8px;
@@ -233,12 +222,12 @@ body {
 
 .nav-link:hover {
     color: var(--primary-color) !important;
-    background: rgba(52, 152, 219, 0.1);
+    background: var(--border-color);
     transform: translateY(-1px);
 }
 
 .nav-link.active {
-    background: rgba(52, 152, 219, 0.15);
+    background: var(--border-color);
     color: var(--primary-color) !important;
 }
 
@@ -249,20 +238,19 @@ body {
 /* Mobile adjustments */
 @media (max-width: 991px) {
     .navbar-collapse {
-        background: white;
+        background: var(--navbar-bg);
         padding: 1rem;
         border-radius: 8px;
         margin-top: 0.5rem;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        box-shadow: var(--navbar-shadow);
     }
     
     .nav-link {
         padding: 0.8rem 1rem !important;
     }
 
-    /* Fix for mobile toggle button */
     .navbar-toggler {
-        border-color: var(--dark-color);
+        border-color: var(--border-color);
     }
 
     .navbar-toggler-icon {
@@ -293,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
     border-left: 3px solid var(--primary-color);
     padding-left: 1rem;
     margin: 1.5rem 0;
-    color: #34495e;
+    color: var(--text-color);
 }
 
 .achievements {
@@ -303,7 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .achievement-badge {
-    background-color: rgba(52, 152, 219, 0.1);
+    background-color: var(--border-color);
     color: var(--primary-color);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
@@ -319,53 +307,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .quiz-cta {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     padding: 2rem;
+    backdrop-filter: blur(10px);
     margin-top: 3rem;
-    backdrop-filter: blur(5px);
+}
+
+.quiz-cta h2,
+.quiz-cta p {
+    color: var(--header-text) !important;
+}
+
+.quiz-badge {
+    margin-bottom: 1rem;
 }
 
 .quiz-badge .badge {
-    font-size: 1.1rem;
-    border-radius: 25px;
-    padding: 0.5rem 1.5rem !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
 }
 
 .quiz-cta .btn-light {
-    transition: transform 0.3s ease;
-    border-radius: 25px;
-    padding: 0.8rem 2rem;
-    font-weight: 500;
+    color: var(--dark-color);
+    background: var(--bg-color);
+    border: none;
+    transition: all 0.3s ease;
 }
 
 .quiz-cta .btn-light:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Pioneer Cards Styling */
 .pioneer-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: var(--card-shadow);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
 }
 
 .pioneer-card:hover {
     transform: var(--hover-transform);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: var(--card-shadow);
 }
 
 .pioneer-image {
     position: relative;
     padding-top: 56.25%; /* 16:9 aspect ratio */
     overflow: hidden;
-    background-color: #f8f9fa; /* Light background for images loading */
+    background-color: var(--bg-secondary);
 }
 
 .pioneer-image img {
@@ -375,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Center the image */
+    object-position: center;
 }
 
 .pioneer-content {
@@ -397,14 +393,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pioneer-description {
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
 
 .pioneer-quote {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
-    border-left: 4px solid var(--accent-color);
+    background: var(--border-color);
+    border-left: 4px solid var(--primary-color);
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 0 15px 15px 0;
@@ -417,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
     top: -20px;
     left: 20px;
     font-size: 5rem;
-    color: rgba(46, 204, 113, 0.2);
+    color: var(--border-color);
     font-family: Georgia, serif;
 }
 
@@ -429,19 +425,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .achievement-badge {
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background: var(--header-bg);
     color: white;
     padding: 0.5rem 1.2rem;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
 }
 
 .achievement-badge:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: var(--card-shadow);
 }
 
 /* Responsive adjustments */
@@ -451,7 +447,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Optional: Add a subtle gradient overlay */
 .pioneer-image::after {
     content: '';
     position: absolute;
@@ -459,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     height: 50%;
-    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+    background: linear-gradient(to bottom, transparent, var(--border-color));
     pointer-events: none;
 }
 
@@ -510,13 +505,13 @@ h1, h2, h3, h4, h5, h6 {
     background: white;
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--card-shadow);
     transition: transform 0.3s ease;
     height: 100%;
 }
 
 .pioneer-description {
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -547,7 +542,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    background: var(--header-bg);
     border-radius: 2px;
 }
 
@@ -568,7 +563,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     font-size: 2rem;
     font-family: monospace;
-    color: rgba(52, 152, 219, 0.1);
+    color: var(--border-color);
     font-weight: bold;
 }
 
@@ -582,9 +577,9 @@ h1, h2, h3, h4, h5, h6 {
 .section-header h2 {
     background: linear-gradient(
         90deg,
-        var(--dark-color) 0%,
+        var(--text-color) 0%,
         var(--primary-color) 50%,
-        var(--dark-color) 100%
+        var(--text-color) 100%
     );
     background-size: 200% auto;
     color: transparent;
@@ -654,4 +649,51 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
     font-family: var(--body-font);
     font-weight: 500;
+}
+
+.text-content {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Base text colors */
+body {
+    color: var(--text-color);
+}
+
+/* Navigation text */
+.navbar-brand, 
+.nav-link,
+.navbar-nav .nav-link {
+    color: var(--text-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Card text */
+.card-title,
+.card-text,
+.card p {
+    color: var(--text-color);
+}
+
+/* Section text */
+.section-header h2 {
+    color: var(--text-color);
+}
+
+.section-header .lead,
+.lead {
+    color: var(--text-secondary);
+}
+
+/* Trait cards */
+.trait-card h3 {
+    color: var(--text-color);
+}
+
+.trait-card p {
+    color: var(--text-secondary);
 }

@@ -63,6 +63,7 @@ This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https:/
   - No flashing elements or sudden movements
   - Simple animations, to avoid any over-stimulation
   - Use of semantic HTML, to help with SEO and screen readers
+  - We use a dyslexic friendly font, Lexend.
 - **Navigation**:
   - Clear, yet simple visual feedback for elements
   - Consistent placement of the navigation buttons and icons
