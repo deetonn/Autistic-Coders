@@ -343,107 +343,104 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pioneer Cards Styling */
 .pioneer-card {
-    background: var(--card-bg);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 2.5rem;
+    background: var(--card-bg) !important;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
     box-shadow: var(--card-shadow);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
-.pioneer-card:hover {
-    transform: var(--hover-transform);
-    box-shadow: var(--card-shadow);
+.pioneer-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.pioneer-image {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+.pioneer-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     overflow: hidden;
-    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
 }
 
-.pioneer-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.pioneer-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-}
-
-.pioneer-content {
-    padding: 2rem;
 }
 
 .pioneer-name {
-    color: var(--dark-color);
+    color: var(--text-color) !important;
     font-size: 1.4rem;
-    margin: 0;
-    line-height: 1.2;
+    margin-bottom: 0.25rem;
 }
 
 .pioneer-title {
-    color: var(--primary-color);
+    color: var(--text-secondary);
+    margin-bottom: 0;
     font-size: 1rem;
-    margin: 0.2rem 0 0 0;
-    font-weight: 500;
 }
 
 .pioneer-description {
     color: var(--text-secondary);
-    line-height: 1.6;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .pioneer-quote {
-    background: var(--border-color);
-    border-left: 4px solid var(--primary-color);
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 0 15px 15px 0;
     position: relative;
+    padding: 1.5rem;
+    background: var(--bg-secondary) !important;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
 }
 
-.pioneer-quote::before {
-    content: '"';
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    font-size: 5rem;
-    color: var(--border-color);
-    font-family: Georgia, serif;
+.pioneer-quote blockquote {
+    color: var(--text-color);
+    font-style: italic;
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-color);
 }
 
 .pioneer-achievements {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1.5rem;
 }
 
 .achievement-badge {
-    background: var(--header-bg);
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
+    background: var(--bg-secondary);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
     font-size: 0.9rem;
-    font-weight: 500;
-    box-shadow: var(--card-shadow);
-    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
-.achievement-badge:hover {
-    transform: translateY(-2px);
+/* Hover effects */
+.pioneer-card:hover {
+    transform: translateY(-5px);
     box-shadow: var(--card-shadow);
 }
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .pioneer-card {
-        margin-bottom: 2rem;
+        padding: 1.5rem;
+    }
+
+    .pioneer-name {
+        font-size: 1.2rem;
+    }
+
+    .pioneer-avatar {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -487,31 +484,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pioneer-name {
-    color: var(--dark-color);
+    color: var(--text-color) !important;
     font-size: 1.4rem;
     margin: 0;
     line-height: 1.2;
 }
 
 .pioneer-title {
-    color: var(--primary-color);
+    color: var(--text-secondary) !important;
     font-size: 1rem;
     margin: 0.2rem 0 0 0;
     font-weight: 500;
 }
 
-/* Update other pioneer card styles */
-.pioneer-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease;
-    height: 100%;
-}
-
 .pioneer-description {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
