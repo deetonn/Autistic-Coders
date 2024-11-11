@@ -43,6 +43,26 @@ This project creates an accessible and informative platform that:
   - Visual feedback on hover
   - Engaging call-to-action design
 
+### Interactive Quiz Features
+- JavaScript Quirks Quiz
+  - Multiple-choice questions
+  - Interactive code playground
+  - Real-time code execution
+  - Detailed explanations
+  - Progress tracking
+  - Navigation between questions
+  - Answer state persistence
+
+### Code Playground
+- Safe JavaScript execution environment
+- VS Code-inspired editor theme
+- Real-time output display
+- Special case handling for:
+  - Empty strings
+  - Undefined values
+  - Type coercion results
+  - Error handling
+
 ## Technical Stack
 - HTML5
 - CSS3
@@ -127,6 +147,37 @@ This project creates an accessible and informative platform that:
   - Large text: minimum 3:1
 - Focus states for interactive elements
 - Responsive text sizing
+
+### Technical Implementation
+- Safe code evaluation using Function constructor
+- State management for quiz progress
+- Answer history tracking
+- Navigation state persistence
+- Clean output formatting
+- Error boundary implementation
+
+### Quiz Content
+- Type coercion examples
+- Array and object operations
+- Operator precedence
+- JavaScript quirks and gotchas
+- Detailed explanations of behavior
+- Real-world implications
+
+### Styling Features
+- VS Code-inspired theme
+- Syntax highlighting
+- Interactive button states
+- Clear visual feedback
+- Responsive design
+- Accessible color scheme
+
+### Future Quiz Enhancements
+- Additional JavaScript quirks
+- More interactive examples
+- Performance metrics
+- Difficulty levels
+- User progress tracking
 
 ## File Structure
 
