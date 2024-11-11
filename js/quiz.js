@@ -269,12 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Safe eval function
     function safeEval(code) {
         try {
-            // Wrap the code in console.log to see the result
-            const wrappedCode = `
-                let result = ${code};
-                return result;
-            `;
-            const result = new Function(wrappedCode)();
+            // we dont wrap the code, because it may vary results if returned from a function.
+            const result = eval(code);
             
             // Handle different types of results
             if (result === '') {
