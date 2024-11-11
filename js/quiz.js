@@ -49,7 +49,7 @@ const quizQuestions = [
     },
     {
         id: 3,
-        question: "Now, to really toy with you, what's the previous operation backwards? So {} + []",
+        question: "Now, to really toy with you, what's the result of {} + []?",
         code: `{} + []`,
         options: [
             "undefined",
@@ -112,8 +112,99 @@ const quizQuestions = [
             <p>A string of "0" is converted to the number 0, so "0" == 0 is true!</p>
             <p class="mt-3"><strong>Fun fact:</strong> <strong>SERIOUSLY</strong>, you should always use <strong>===</strong> lol.</p> 
         `
+    },
+    {
+        id: 6,
+        question: "What is the result of this expression?",
+        code: `"b" + "a" + +"a" + "a"`,
+        options: [
+            "'baNaNa'",
+            "TypeError",
+            "undefined",
+            "'baaa'"
+        ],
+        correctAnswer: 0,
+        explanation: `
+            <div class="explanation-title">What is this madness?</div>
+            <p>This expression is a bit simple, but let's break it down:</p>
+            <ol>
+                <li>First, we have the string "b" + "a" which is "ba"</li>
+                <li>Next, we have + +"a" which is 'NaN' (Not a Number), because that's what the + operator does.</li>
+                <li>Then, we have "a" left, so we add that to the string, resulting in "baa"</li>
+                <li>Finally, we add "a" to the string, resulting in "baNaNa"</li>
+            </ol>
+        `
+    },
+    {
+        id: 7,
+        question: "What is the result of this expression?",
+        code: "{foo: 'bar'}{}",
+        options: [
+            'undefined',
+            '"foo"',
+            '"bar"',
+            'TypeError'
+        ],
+        correctAnswer: 2,
+        explanation: `
+            <div class="explanation-title">This is an obscure one</div>
+            <p>This expression is a bit strange. The first {} is interpreted as a code block, and the second {} is interpreted as an empty object.</p>
+            <p>The result is the string "bar", because it is the value of the foo property, which wasnt actually defined inside of an object, but an empty block.</p>
+        `
+    },
+    {
+        id: 8,
+        question: "What is returned from this function?",
+        code: `function a(x) {
+  arguments[0] = "hello";
+  return x;
+}
+
+a(1); // ? What does this return?`,
+        options: [
+            "1",
+            "undefined",
+            "hello",
+            "null"
+        ],
+        correctAnswer: 2,
+        explanation: `
+            <div class="explanation-title">Meet argument bindings, the joys of dynamic programming languages!</div>
+            <p>In JavaScript, the <strong>arguments</strong> object is an array-like object that contains the values of the arguments passed to a function. However, it behaves like an array, but it is not an array.</p>
+            <p>Lets break down the function:</p>
+            <ol>
+                <li>The function <strong>a</strong> takes a single argument <strong>x</strong>.</li>
+                <li>When the function is called with <strong>a(1)</strong>, the argument <strong>x</strong> is set to <strong>1</strong>.</li>
+                <li>When it returns, it returns the value of <strong>x</strong>, which is <strong>"hello"</strong>. (because we set it to "hello" using arguments[0] = "hello")</li>
+            </ol>
+            <p>Booky one that!</p>
+        `
+    },
+    {
+        id: 9,
+        question: "What happens when this code is run?",
+        code: '[666]["\x6D\x61\x70"]["\x63\x6F\x6E\x73\x74\x72\x75\x63\x74\x6F\x72"]("\x61\x6C\x65\x72\x74(666)")(666);',
+        options: [
+            "666",
+            "console.log('hello, world!')",
+            "alert(666)",
+            "TypeError"
+        ],
+        correctAnswer: 2,
+        explanation: `
+            <div class="explanation-title">This one is directly from hell.</div>
+            <p>This code is a bit complex, but lets break it down:</p>
+            <ol>
+                <li>The expression starts with <strong>[666]</strong>, which is an array with a single element, the number 666.</li>
+                <li>Next, it accesses the <strong>map</strong> property of the array, which is a function that creates a new array with the results of calling a provided function on every element in the calling array.</li>
+                <li>Then, it accesses the <strong>constructor</strong> property of the map function, which is a function that creates a new object.</li>
+                <li>Then, it calls the constructor function with the string "\x61\x6C\x65\x72\x74(666)", which is the string "alert(666)" in Unicode escape notation.</li>
+                <li>Finally, it calls the resulting function with the argument 666.</li>
+            </ol>
+            <p class="mt-3">Warning, this may not work in our runner, because browsers block unsafe eval.</p>
+        `
     }
-];
+].sort(() => Math.random() - 0.5);
 
 // Quiz State
 const quizState = {
