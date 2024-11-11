@@ -36,6 +36,13 @@ This project creates an accessible and informative platform that:
 - Responsive card layouts
 - Quote highlighting
 
+### Interactive Features
+- JavaScript Mind-Boggle Quiz
+  - Accessible from homepage header
+  - Links to dedicated quiz page
+  - Visual feedback on hover
+  - Engaging call-to-action design
+
 ## Technical Stack
 - HTML5
 - CSS3

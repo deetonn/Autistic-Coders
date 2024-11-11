@@ -2,18 +2,76 @@
 const quizQuestions = [
     {
         id: 1,
-        code: `console.log([] + []);`,
-        question: "What will this code output?",
+        question: "What's the result of adding two empty arrays together?",
+        code: `[] + []`,
         options: [
             "[]",
-            "''", // empty string
+            "Empty String ('')",
+            "[object Object]",
+            "undefined"
+        ],
+        correctAnswer: 1,
+        explanation: `
+            <div class="explanation-title">JavaScript garbage explained!</div>
+            <p>Surprise! When you add two empty arrays together, JavaScript decides to turn them into strings first (because why not?).</p>
+            <p>Here's what happens under the hood:</p>
+            <ol>
+                <li>First, JavaScript thinks: "Arrays? Let me convert those to strings!"</li>
+                <li>[] becomes "" (an empty string)</li>
+                <li>"" + "" equals ""</li>
+            </ol>
+            <p>It's like JavaScript is saying: "Empty array? That's just a fancy way of saying nothing!"</p>
+            <p class="mt-3"><strong>Fun fact:</strong> This quirk has probably caused hundreds of thousands of developers to question their career choices! 🤔 Welcome to the club! 🎉</p>
+        `
+    },
+    {
+        id: 2,
+        question: "What's the result of adding an empty array to an object?",
+        code: `[] + {}`,
+        options: [
+            "[object Object]",
+            "undefined",
+            "TypeError",
+            "[]",
+        ],
+        correctAnswer: 0,
+        explanation: `
+            <div class="explanation-title">God I hate this</div>
+            <p>How disgusting is that? Javascript just decides to turn them into strings and call it a day.</p>
+            <p>Here's what happens under the hood:</p>
+            <ol>
+                <li>First, JavaScript thinks: "Arrays? Let me convert those to strings!"</li>
+                <li>[] becomes "" (an empty string)</li>
+                <li>{} becomes "[object Object]" (a string representation of the object)</li>
+                <li>"" + "[object Object]" equals "[object Object]"</li>
+            </ol>
+        `
+    },
+    {
+        id: 3,
+        question: "Now, to really toy with you, what's the previous operation backwards? So {} + []",
+        code: `{} + []`,
+        options: [
+            "undefined",
+            "0",
             "[object Object]",
             "TypeError"
         ],
-        correctAnswer: 1, // Index of correct answer
-        explanation: "In JavaScript, when you use the + operator with arrays, they are first converted to strings. An empty array converts to an empty string, so [] + [] is equivalent to '' + '', which results in an empty string."
-    },
-    // More questions will be added here
+        correctAnswer: 1,
+        explanation: `
+            <div class="explanation-title">I'm not even mad</div>
+            <p>In this example, javascript interprets the <strong>{}</strong> as a code block, which is empty.</p>
+            <p>Here's what happens under the hood:</p>
+            <ol>
+                <li>First, javascript interprets the <strong>{}</strong> as a code block, which is empty.</li>
+                <li>Then, <strong>+[]</strong> is whats left, so thats what is evaluated.</li>
+                <li>Because we used the plus operator, javascript will convert the array into a string, which as we saw previously, is <strong>""</strong>.</li>
+                <li>In javascript, an empty string is <strong>falsey</strong>, so the <strong>+</strong> operator converts it to <strong>0</strong>. (as 0 = false, 1 = true)</li>
+                <li>Then we get zero! 🎉</li>
+                <p class="mt-3"><strong>Fun fact:</strong> The language with this horrible logic, is controlling this quiz logic right now 🤣</p>
+            </ol>
+        `
+    }
 ];
 
 // Quiz State
@@ -26,6 +84,7 @@ const quizState = {
 // DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
     const questionCard = document.querySelector('.question-card');
+    const questionText = document.querySelector('.question-text');
     const codeBlock = document.querySelector('.code-block code');
     const answerButtons = document.querySelectorAll('.answer-btn');
     const explanationDiv = document.querySelector('.explanation');
@@ -47,7 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
         explanationDiv.classList.add('d-none');
         nextButton.style.display = 'none';
 
-        // Load question content
+        // Set question text
+        questionText.textContent = question.question;
+        
+        // Load code content
         codeBlock.textContent = question.code;
         
         // Load answers
@@ -60,14 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle Answer Selection
     function handleAnswer(selectedIndex) {
-        if (quizState.answered) return;
-        
         const question = quizQuestions[quizState.currentQuestion];
-        quizState.answered = true;
+        
+        // Reset previous answers
+        answerButtons.forEach(button => {
+            button.classList.remove('correct', 'incorrect');
+        });
 
         // Show correct/incorrect answers
         answerButtons.forEach((button, index) => {
-            button.disabled = true;
             if (index === question.correctAnswer) {
                 button.classList.add('correct');
             } else if (index === selectedIndex) {
@@ -76,14 +139,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Show explanation
-        explanationDiv.textContent = question.explanation;
+        explanationDiv.innerHTML = question.explanation;
         explanationDiv.classList.remove('d-none');
 
-        // Update score and show next button
-        if (selectedIndex === question.correctAnswer) {
+        // Update score
+        if (selectedIndex === question.correctAnswer && !quizState.answered) {
             quizState.score++;
         }
+        
+        quizState.answered = true;
 
+        // Show next button
         if (quizState.currentQuestion < quizQuestions.length - 1) {
             nextButton.style.display = 'block';
         } else {
