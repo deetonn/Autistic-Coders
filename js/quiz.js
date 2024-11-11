@@ -71,6 +71,29 @@ const quizQuestions = [
                 <p class="mt-3"><strong>Fun fact:</strong> The language with this horrible logic, is controlling this quiz logic right now 🤣</p>
             </ol>
         `
+    },
+    {
+        id: 4,
+        question: "What's the result of comparing an empty array to zero?",
+        code: `[] == 0`,
+        options: [
+            "true",
+            "false",
+            "undefined",
+            "TypeError"
+        ],
+        correctAnswer: 0,
+        explanation: `
+            <div class="explanation-title">That's right, they're equal??</div>
+            <p>In JavaScript, an empty array when converted to a string is an empty string, which is equal to zero. (I know. I know.)</p>
+            <p>Here's what happens under the hood:</p>
+            <ol>
+                <li>JavaScript doesn't know how to compare an array with a number."</li>
+                <li>So, naturally instead of throwing an exception, it simply converts the array into a string.</li>
+                <li>An empty string is equal to zero, so [] == 0 is true!</li>
+            </ol>
+            <p class="mt-3"><strong>Fun fact:</strong> This is why you should always use <strong>===</strong> instead of <strong>==</strong> in JavaScript. (unless you want this behavior)</p> 
+        `
     }
 ];
 
@@ -78,7 +101,9 @@ const quizQuestions = [
 const quizState = {
     currentQuestion: 0,
     score: 0,
-    answered: false
+    answered: false,
+    answerHistory: [], // Store answers for each question
+    selectedAnswers: {} // Track selected answers
 };
 
 // DOM Elements
@@ -89,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const answerButtons = document.querySelectorAll('.answer-btn');
     const explanationDiv = document.querySelector('.explanation');
     const nextButton = document.getElementById('nextQuestion');
+    const prevButton = document.getElementById('prevQuestion');
 
     // Initialize Quiz
     function initializeQuiz() {
@@ -101,29 +127,56 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = quizQuestions[questionIndex];
         if (!question) return;
 
-        // Reset state
-        quizState.answered = false;
+        // Reset state but maintain answer if it exists
+        quizState.answered = quizState.selectedAnswers[questionIndex] !== undefined;
         explanationDiv.classList.add('d-none');
-        nextButton.style.display = 'none';
 
-        // Set question text
+        // Set question text and code
         questionText.textContent = question.question;
-        
-        // Load code content
         codeBlock.textContent = question.code;
         
-        // Load answers
+        // Load answers and show previous selections
         answerButtons.forEach((button, index) => {
             button.textContent = question.options[index];
             button.classList.remove('correct', 'incorrect');
+            
+            // Restore previous answer state if it exists
+            if (quizState.selectedAnswers[questionIndex] !== undefined) {
+                if (index === question.correctAnswer) {
+                    button.classList.add('correct');
+                } else if (index === quizState.selectedAnswers[questionIndex]) {
+                    button.classList.add('incorrect');
+                }
+            }
+            
             button.disabled = false;
         });
+
+        // Show/hide navigation buttons
+        prevButton.style.display = questionIndex > 0 ? 'block' : 'none';
+        nextButton.style.display = quizState.answered ? 'block' : 'none';
+        
+        // Update next button text for last question
+        if (questionIndex === quizQuestions.length - 1) {
+            nextButton.textContent = 'See Results';
+        } else {
+            nextButton.textContent = 'Next';
+        }
+
+        // Show explanation if question was answered
+        if (quizState.selectedAnswers[questionIndex] !== undefined) {
+            explanationDiv.innerHTML = question.explanation;
+            explanationDiv.classList.remove('d-none');
+        }
     }
 
     // Handle Answer Selection
     function handleAnswer(selectedIndex) {
         const question = quizQuestions[quizState.currentQuestion];
         
+        // Store the selected answer
+        quizState.selectedAnswers[quizState.currentQuestion] = selectedIndex;
+
         // Reset previous answers
         answerButtons.forEach(button => {
             button.classList.remove('correct', 'incorrect');
@@ -142,20 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
         explanationDiv.innerHTML = question.explanation;
         explanationDiv.classList.remove('d-none');
 
-        // Update score
-        if (selectedIndex === question.correctAnswer && !quizState.answered) {
+        // Update score only if first attempt
+        if (!quizState.answered && selectedIndex === question.correctAnswer) {
             quizState.score++;
         }
         
         quizState.answered = true;
 
-        // Show next button
-        if (quizState.currentQuestion < quizQuestions.length - 1) {
-            nextButton.style.display = 'block';
-        } else {
-            nextButton.textContent = 'See Results';
-            nextButton.style.display = 'block';
-        }
+        // Show navigation buttons
+        prevButton.style.display = 'block';
+        nextButton.style.display = 'block';
     }
 
     // Event Listeners
@@ -173,9 +222,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    prevButton.addEventListener('click', () => {
+        if (quizState.currentQuestion > 0) {
+            quizState.currentQuestion--;
+            loadQuestion(quizState.currentQuestion);
+        }
+    });
+
     // Show Quiz Results
     function showResults() {
-        const percentage = (quizState.score / quizQuestions.length) * 100;
+        const percentage = Math.round((quizState.score / quizQuestions.length) * 100);
         questionCard.innerHTML = `
             <h2 class="text-center mb-4">Quiz Complete!</h2>
             <p class="lead text-center">You scored ${quizState.score} out of ${quizQuestions.length} (${percentage}%)</p>

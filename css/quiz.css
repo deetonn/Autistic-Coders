@@ -188,4 +188,38 @@
 .answer-btn.incorrect:hover {
     transform: translateY(-2px);
     color: white !important;
+}
+
+/* Quiz Navigation Styling */
+.quiz-navigation {
+    padding: 0 1rem;
+}
+
+.quiz-navigation .btn {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.quiz-navigation .btn i {
+    font-size: 1.1rem;
+}
+
+/* Add smooth transitions for buttons */
+#prevQuestion, #nextQuestion {
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .quiz-navigation {
+        padding: 0;
+    }
+    
+    .quiz-navigation .btn {
+        min-width: auto;
+        padding: 0.5rem 1rem;
+    }
 } 
