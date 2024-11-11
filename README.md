@@ -1,224 +1,234 @@
-# Autistic Coders Website
+# Autistic Coders
 
-A Bootstrap-powered website celebrating the connection between autism and programming, highlighting how autistic traits can be tremendous assets in the programming world.
+A website dedicated to celebrating and supporting autistic programmers, highlighting the natural connection between autism and coding.
 
 ## Project Overview
 
-This project creates an accessible and informative platform that:
-- Explores the natural connection between autism and programming
-- Highlights successful autistic programmers in tech
-- Provides a sensory-friendly user experience
-- Demonstrates responsive web design principles
+This project aims to create a fun website, with a focus on autistic people in programming. We provide a fun quiz, to make fun of JavaScript, and some resources to help with learning programming.
 
-## Features
+### User Experience (UX)
 
-### Home Page
-- Welcoming hero section with gradient background
-- Explanation of autism traits beneficial to programming:
-  - Direct Communication
-  - Pattern Recognition
-  - Deep Focus
-  - Logical Thinking
-- Profiles of notable autistic programmers including:
-  - Bram Cohen (BitTorrent creator)
-  - Satoshi Tajiri (Pokémon creator)
-  - Temple Grandin
-  - Susan Rakov
+#### User Stories
 
-### Design Elements
-- Sensory-friendly color scheme using:
-  - Calming blues (#3498db)
-  - Soft greens (#2ecc71)
-  - Neutral grays (#2c3e50)
-- Smooth animations and transitions
-- Clear visual hierarchy
-- Accessible contrast ratios
-- Responsive card layouts
-- Quote highlighting
+1. **First Time Visitor Goals**
+   - As a first time visitor, I want to understand the connection between autism and programming
+   - As a first time visitor, I want to find resources for learning programming
+   - As a first time visitor, I want to see examples of successful autistic programmers
 
-### Interactive Features
-- JavaScript Mind-Boggle Quiz
-  - Accessible from homepage header
-  - Links to dedicated quiz page
-  - Visual feedback on hover
-  - Engaging call-to-action design
+2. **Returning Visitor Goals**
+   - As a returning visitor, I want to try the JavaScript quiz
+   - As a returning visitor, I want to find community resources
+   - As a returning visitor, I want to access learning platforms
 
-### Interactive Quiz Features
-- JavaScript Quirks Quiz
-  - Multiple-choice questions
-  - Interactive code playground
-  - Real-time code execution
-  - Detailed explanations
-  - Progress tracking
-  - Navigation between questions
-  - Answer state persistence
+3. **Frequent User Goals**
+   - As a frequent user, I want to check for new resources
+   - As a frequent user, I want to test my JavaScript knowledge, and see if there's any new questions.
+   - As a frequent user, I want to find community connections
 
-### Code Playground
-- Safe JavaScript execution environment
-- VS Code-inspired editor theme
-- Real-time output display
-- Special case handling for:
-  - Empty strings
-  - Undefined values
-  - Type coercion results
-  - Error handling
+### Features
 
-## Technical Stack
-- HTML5
-- CSS3
-- Bootstrap 5.3
-- Google Fonts
+#### The home page
 
-## Technical Implementation Details
+Learn about why autism and coding are a good fit. The connections between autism and coding
+are really interesting to me, that's why I chose this topic. 
 
-### HTML Components
-- Semantic structure using HTML5 elements:
-  - `<header>` for hero section
-  - `<nav>` for navigation
-  - `<main>` for primary content
-  - `<section>` for content grouping
-  - `<article>` for pioneer profiles
-  - `<blockquote>` for testimonials
+I chose a few examples of programmers who are autistic, to show that there's success in this field for autistic people, and also to add some relatability to the site.
 
-### CSS Features
-- Custom Properties (CSS Variables):
-  ```css
-  :root {
-    --primary-color: #3498db;
-    --accent-color: #2ecc71;
-    --dark-color: #2c3e50;
-    --light-color: #ecf0f1;
-  }
-  ```
+#### The resources page
 
-- Gradient Backgrounds:
-  ```css
-  .hero-section {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  }
-  ```
+This page is dedicated to some resources that others may find useful. This includes learning platforms, tools for making life easier and community support, like a discord group, reddit group and advice on getting out and making real connections.
 
-- Card Animations:
-  ```css
-  .trait-card {
-    transition: transform 0.3s ease;
-  }
-  .trait-card:hover {
-    transform: translateY(-5px);
-  }
-  ```
+#### The quiz page
 
-### Bootstrap Classes Used
-- Layout:
-  - `.container` for centered content
-  - `.row` and `.col-*` for grid system
-  - `.g-4` for grid gutters
-- Components:
-  - `.navbar` and `.navbar-*` for navigation
-  - `.card` for content boxes
-  - `.display-4` for hero text
-  - `.lead` for emphasized paragraphs
+This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https://www.youtube.com/watch?v=aXOChLn5ZdQ). I've done lots of research into the caveats of JavaScript, and have followed [Andreas Kling](https://www.youtube.com/@AndreasKling) for a while, while he builds his own browser. [LadyBird Browser](https://www.ladybird.org/) is a great project, and I've learned a lot from watching him.
 
-### Responsive Breakpoints
-```css
-/* Mobile First Approach */
-/* Base styles for mobile */
+### Design Philosophy
 
-/* Medium devices (tablets) */
-@media (min-width: 768px) {
-    .trait-card {
-        padding: 2rem;
-    }
-}
+#### Visual Design
+- **Clean Layout**: Simple design, with a focus on the page content. Also, it's bootstrap, so there's not much point in trying to make a masterpeice.
+- **Consistent Navigation**: The navbar is sticky, and lives on each page. The buttons have nice, but not too in-your-face animations. (AI helped with this, as I'm no CSS god)
+- **Color Scheme**: 
+  - Carefully selected gradients for visual interest without overwhelming (Dark mode could be a good feature)
+  - High contrast for readability
+  - Soft transitions between colors
+- **Typography**: 
+  - Clear, readable fonts (Browser defaults)
+  - Nice spacing for easy reading
+  - Consistent hierarchy, keeping content easy to read, and top to bottom
 
-/* Large devices (desktops) */
-@media (min-width: 992px) {
-    .hero-section {
-        padding: 5rem 0;
-    }
-}
-```
+#### Accessibility Features
+- **Sensory Considerations**:
+  - No flashing elements or sudden movements
+  - Simple animations, to avoid any over-stimulation
+  - Use of semantic HTML, to help with SEO and screen readers
+- **Navigation**:
+  - Clear, yet simple visual feedback for elements
+  - Consistent placement of the navigation buttons and icons
+  - The navbar highlights the current page
 
-### Accessibility Implementation
-- ARIA labels where needed
-- Semantic HTML structure
-- Color contrast ratios:
-  - Normal text: minimum 4.5:1
-  - Large text: minimum 3:1
-- Focus states for interactive elements
-- Responsive text sizing
+### Key Features
+
+#### Home Page
+- **Hero Section**: 
+  - A simple, clean introduction
+  - A CTA button, that takes the user to the quiz
+- **Trait Cards**: 
+  - Explains connection between autism and programming
+  - Uses emojis, with a gradient background for a unique look
+  - Organized in a 2x2 grid to make use of all space on desktop.
+  - On mobile, the cards go single file, with a nice animation when they load.
+- **Pioneer Profiles**: 
+  - Provide information about well known autistic programmers
+  - Includes their acheivements, quotes and an image of them (Image is WEBP, to reduce file size)
+  - Simple design, to keep a clear focus on the content.
+
+#### Resources Section
+- **Structured Categories**:
+  - Learning platforms, including freeCodeCamp, The Odin Project and Fireship.
+  - Information about browser tools, to have all websites darkmode, using tools like reading mode and listening to music!
+  - Groups and information about ways to make connections, including discord groups, reddit groups and advice on getting out and making real connections.
+- **Card Design**:
+  - Clear categorization, with different icons for each.
+  - Gentle hover effects, to make it obvious which card the user is hovering over.
+  - Important information prominently displayed
+
+#### JavaScript Quiz
+- **Interactive Learning**:
+  - Hands-on code examples, mainly to mess with the users head (JavaScript is a bit weird)
+  - Immediate feedback, with the answer explained clearly, and a code runner so the user can mess about.
 
 ### Technical Implementation
-- Safe code evaluation using Function constructor
-- State management for quiz progress
-- Answer history tracking
-- Navigation state persistence
-- Clean output formatting
-- Error boundary implementation
 
-### Quiz Content
-- Type coercion examples
-- Array and object operations
-- Operator precedence
-- JavaScript quirks and gotchas
-- Detailed explanations of behavior
-- Real-world implications
+#### CSS Architecture
+- Separate stylesheets for different purposes:
+  - `styles.css`: Core styles and shared components such as the navbar, cards and buttons.
+  - `quiz.css`: Quiz-specific styling
+  - `resources.css`: Resource page specific styles
 
-### Styling Features
-- VS Code-inspired theme
-- Syntax highlighting
-- Interactive button states
-- Clear visual feedback
-- Responsive design
-- Accessible color scheme
+#### JavaScript Features
+- **Quiz Logic**:
+  - Unsafe code evaluation, which is needed for the quiz answers to work as intended.
+  - State management, to keep track of the users progress.
+  - Progress tracking, so we can show the user how they did at the end.
 
-### Future Quiz Enhancements
-- Additional JavaScript quirks
-- More interactive examples
-- Performance metrics
-- Difficulty levels
-- User progress tracking
+#### Responsive Design
+- The page can easily be resized, with the content scaling to fit the screen.
+- Touch-friendly interactions, so the user can interact with the page on a mobile device.
 
-## File Structure
+### Future Enhancements
+- Dark mode toggle
+- Customizable text size
+- Additional quiz topics
+- More pioneer profiles
+- Expanded resource database
+- Community features
 
+### Accessibility Goals
+- WCAG 2.1 AA compliance (As much as possible) [W3C](https://www.w3.org/TR/WCAG21/)
+- Keyboard navigation (Tab, Shift+Tab, Enter, Space)
+- Screen reader friendly (Using semantic HTML)
+
+### Development Decisions
+- **Bootstrap Framework**:
+  - Provides consistent base styling
+  - Ensures responsive behavior
+  - Familiar to many developers
+- **Custom Styling**:
+  - Enhances default Bootstrap
+  - Adds personality, removing the bootstrap look
+  - Focuses on user comfort
+- **JavaScript**:
+  - Custom javascript was written to handle the quiz logic.
+
+### Testing
+
+#### Manual Testing
+
+1. **Navigation**
+   - Verified all navigation links work correctly
+   - Tested responsive navbar on multiple devices
+   - Confirmed active states show current page
+
+2. **Resources Page**
+   - Tested all external links
+   - Verified card hover effects
+   - Confirmed responsive layout
+
+3. **Quiz Functionality**
+   - Tested code execution
+   - Verified answer checking
+   - Confirmed progress tracking
+   - Tested on multiple browsers (Chrome, Firefox)
+
+4. **Responsiveness**
+   All tests were conducted in the devtools, using the device toolbar.
+   - Mobile (iPhone 12 Pro)
+   - Desktop (1920x1080)
+   - iPhone SE
+   - iPad Air
+
+### Known Bugs
+
+1. **Quiz Page**
+   - Code execution sometimes shows undefined for certain inputs
+   - Quiz progress resets on page refresh
+
+2. **Resources Page**
+   - External links sometimes open in same tab
+   - Card animations can stutter on slower devices
+
+### Deployment
+
+The site is deployed on GitHub Pages. The deployment process was:
+
+1. Navigate to the repository settings
+2. Select Pages from the left menu
+3. Choose main branch as source
+4. Select root folder
+5. Save the settings
+
+The live site can be found at the github pages link (at the top of the README)
+
+To run locally:
+1. Clone the repository
+2. run `python -m http.server`
+3. Open the browser and navigate to `localhost:8000`
+
+### Credits
+
+#### Content
+- Pioneer profiles information from [chatgpt.com](https://chatgpt.com)
+- JavaScript quiz questions inspired by [FireShip](https://fireship.io)
+- Resource links curated from [reddit.com](https://reddit.com), [youtube.com](https://youtube.com) and [google.com](https://google.com)
+
+#### Media
+- Icons from Bootstrap Icons
+- Profile images from [Google Images](https://images.google.com)
+
+#### Code
+- The code was not inspired, but I did use AI to help.
+
+**Explaination**: AI helped with the exection of the user input. I tried to be fancy, and safely execute the code, like this:
+
+```javascript
+const userInput = ...;
+const functionCode = `const result = ${userInput}; return result;`;
+const result = Function(functionCode)();
 ```
-project/
-│
-├── index.html # Main homepage
-├── css/
-│ └── styles.css # Custom styling
-└── README.md # Project documentation
-```
 
+However, this did not result in the intended output, as some of the questions required to *NOT* be inside of a function context.
 
-## Accessibility Features
-- High contrast text
-- Clear visual hierarchy
-- Smooth transitions
-- Semantic HTML
-- Responsive design
-- Screen reader friendly headings
-- Alternative text for images
+AI helped me to figure this out quicker.
 
-## Color Scheme
-- Primary Color: #3498db (Calming Blue)
-- Accent Color: #2ecc71 (Soft Green)
-- Dark Color: #2c3e50 (Deep Blue-Gray)
-- Light Color: #ecf0f1 (Soft Gray-White)
+### Future Features
 
-## Responsive Design
-- Mobile-first approach
-- Breakpoints:
-  - Small: up to 576px
-  - Medium: 576px - 768px
-  - Large: 768px and above
+1. **Enhanced Quiz**
+   - Multiple difficulty levels, instead of just ridiculously hard lol.
+   - More JavaScript topics
 
-## Future Enhancements
-- Resources section
-- Community stories
-- Learning pathways
-- Career guidance
-- Support resources
+2. **Accessibility**
+   - Dark mode toggle
 
-## Contributing
-This project is part of an educational assignment and is not currently open for contributions.
+3. **Content**
+   - More pioneer profiles
+   - Additional learning resources
