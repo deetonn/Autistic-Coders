@@ -541,19 +541,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-/* Add decorative elements */
-.section-header::before {
-    content: '{ }';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    font-family: monospace;
-    color: var(--border-color);
-    font-weight: bold;
-}
-
 /* Header Animations */
 @keyframes gradientFlow {
     0% { background-position: 0% 50%; }
