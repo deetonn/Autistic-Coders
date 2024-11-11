@@ -222,4 +222,98 @@
         min-width: auto;
         padding: 0.5rem 1rem;
     }
-} 
+}
+
+/* Code Playground Styling */
+.try-it-yourself {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.try-it-title {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.code-playground {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.code-editor {
+    background: #1e1e1e;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.code-editor pre {
+    margin: 0;
+    color: #d4d4d4;
+    font-family: 'Consolas', monospace;
+    min-height: 60px;
+}
+
+.code-editor pre:focus {
+    outline: 1px solid #454545;
+}
+
+.run-code-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.run-code-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-1px);
+}
+
+.run-code-btn:active {
+    transform: translateY(0);
+}
+
+.code-output {
+    background: #1e1e1e;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.output-title {
+    color: #569cd6;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.output-content {
+    color: #d4d4d4;
+    margin: 0;
+    min-height: 24px;
+    font-family: 'Consolas', monospace;
+    padding: 1rem;
+    background: #2d2d2d;
+    border-radius: 4px;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.output-content span {
+    font-family: 'Consolas', monospace;
+}
+ 

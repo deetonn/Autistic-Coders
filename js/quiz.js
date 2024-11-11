@@ -92,7 +92,25 @@ const quizQuestions = [
                 <li>So, naturally instead of throwing an exception, it simply converts the array into a string.</li>
                 <li>An empty string is equal to zero, so [] == 0 is true!</li>
             </ol>
-            <p class="mt-3"><strong>Fun fact:</strong> This is why you should always use <strong>===</strong> instead of <strong>==</strong> in JavaScript. (unless you want this behavior)</p> 
+            <p class="mt-3"><strong>Fun fact:</strong> This is why you should always use <strong>===</strong> (strict equality, will not perform type coercion) instead of <strong>==</strong> (loose equality, will perform type coercion) in JavaScript. (unless you want this behavior)</p> 
+        `
+    },
+    {
+        id: 5,
+        question: "What about this one? Is a string of zero, equal to zero?",
+        code: `"0" == 0`,
+        options: [
+            "true",
+            "false",
+            "undefined",
+            "TypeError"
+        ],
+        correctAnswer: 0,
+        explanation: `
+            <div class="explanation-title">Yes, it is</div>
+            <p>Again, because we used the <strong>==</strong> operator, javascript will convert the string into a number before comparison.</p>
+            <p>A string of "0" is converted to the number 0, so "0" == 0 is true!</p>
+            <p class="mt-3"><strong>Fun fact:</strong> <strong>SERIOUSLY</strong>, you should always use <strong>===</strong> lol.</p> 
         `
     }
 ];
@@ -115,6 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const explanationDiv = document.querySelector('.explanation');
     const nextButton = document.getElementById('nextQuestion');
     const prevButton = document.getElementById('prevQuestion');
+
+    const tryItYourself = document.querySelector('.try-it-yourself');
+    const codeEditor = document.querySelector('.code-editor code');
+    const runCodeBtn = document.querySelector('.run-code-btn');
+    const outputContent = document.querySelector('.output-content');
 
     // Initialize Quiz
     function initializeQuiz() {
@@ -168,6 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
             explanationDiv.innerHTML = question.explanation;
             explanationDiv.classList.remove('d-none');
         }
+
+        // Show try-it-yourself if question was answered
+        if (quizState.selectedAnswers[questionIndex] !== undefined) {
+            tryItYourself.classList.remove('d-none');
+            codeEditor.textContent = question.code;
+        } else {
+            tryItYourself.classList.add('d-none');
+        }
     }
 
     // Handle Answer Selection
@@ -205,6 +236,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show navigation buttons
         prevButton.style.display = 'block';
         nextButton.style.display = 'block';
+
+        // Show the try it yourself section
+        tryItYourself.classList.remove('d-none');
+        
+        // Set the current question's code in the editor
+        codeEditor.textContent = question.code;
     }
 
     // Event Listeners
@@ -227,6 +264,40 @@ document.addEventListener('DOMContentLoaded', () => {
             quizState.currentQuestion--;
             loadQuestion(quizState.currentQuestion);
         }
+    });
+
+    // Safe eval function
+    function safeEval(code) {
+        try {
+            // Wrap the code in console.log to see the result
+            const wrappedCode = `
+                let result = ${code};
+                return result;
+            `;
+            const result = new Function(wrappedCode)();
+            
+            // Handle different types of results
+            if (result === '') {
+                return "\"\"";
+            } else if (result === undefined) {
+                return 'undefined';
+            } else if (result === null) {
+                return 'null';
+            } else {
+                return String(result);
+            }
+        } catch (error) {
+            return 'Error: ' + error.message;
+        }
+    }
+
+    // Run code button handler
+    runCodeBtn.addEventListener('click', () => {
+        const code = codeEditor.textContent.trim();
+        const result = safeEval(code);
+        
+        // Set the output directly, no template literal
+        outputContent.textContent = result;
     });
 
     // Show Quiz Results
