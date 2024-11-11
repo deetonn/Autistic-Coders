@@ -6,6 +6,8 @@ A website dedicated to celebrating and supporting autistic programmers, highligh
 
 This project aims to create a fun website, with a focus on autistic people in programming. We provide a fun quiz, to make fun of JavaScript, and some resources to help with learning programming.
 
+[Live Site](https://deetonn.github.io/autistic-coders/)
+
 ### User Experience (UX)
 
 #### User Stories
