@@ -2,12 +2,31 @@
 .hero-section {
     background-color: #f8f9fa;
     padding: 4rem 0;
+    border-bottom: 3px solid #e9ecef;
+}
+
+.lead {
+    color: #495057;
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
 }
 
 .card {
     transition: transform 0.2s;
     border: none;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
 }
 
 .card:hover {
