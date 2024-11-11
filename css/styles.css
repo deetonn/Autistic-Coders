@@ -223,3 +223,165 @@ h1, h2 {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+/* Pioneer Cards Styling */
+.pioneer-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.pioneer-card:hover {
+    transform: translateY(-5px);
+}
+
+.pioneer-image {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    background-color: #f8f9fa; /* Light background for images loading */
+}
+
+.pioneer-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Center the image */
+}
+
+.pioneer-content {
+    padding: 2rem;
+}
+
+.pioneer-name {
+    color: var(--dark-color);
+    font-size: 1.4rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.pioneer-title {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin: 0.2rem 0 0 0;
+    font-weight: 500;
+}
+
+.pioneer-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.pioneer-quote {
+    background: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.pioneer-quote blockquote {
+    margin: 0;
+    font-style: italic;
+    color: #555;
+}
+
+.pioneer-achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.achievement-badge {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .pioneer-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Optional: Add a subtle gradient overlay */
+.pioneer-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+    pointer-events: none;
+}
+
+/* Update Pioneer Card Styling */
+.pioneer-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pioneer-avatar {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+}
+
+.pioneer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pioneer-title-group {
+    flex-grow: 1;
+}
+
+.pioneer-name {
+    color: var(--dark-color);
+    font-size: 1.4rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.pioneer-title {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin: 0.2rem 0 0 0;
+    font-weight: 500;
+}
+
+/* Update other pioneer card styles */
+.pioneer-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.pioneer-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
