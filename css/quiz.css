@@ -225,44 +225,33 @@
 }
 
 /* Code Playground Styling */
-.try-it-yourself {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-.try-it-title {
-    color: var(--text-color);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
 .code-playground {
-    background: var(--card-bg);
+    background: var(--bg-secondary);
     border-radius: 8px;
     padding: 1rem;
+    margin-top: 1rem;
 }
 
 .code-editor {
-    background: var(--card-bg);
+    background: var(--code-bg, #1e1e1e);
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .code-editor pre {
     margin: 0;
-    color: var(--text-color);
-    font-family: 'Consolas', monospace;
-    min-height: 60px;
+    white-space: pre-wrap;
+    font-family: 'Consolas', 'Monaco', monospace;
+    color: var(--code-text, #d4d4d4);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-.code-editor pre:focus {
-    outline: 1px solid var(--border-color);
+.code-editor code {
+    display: block;
+    outline: none;
 }
 
 .run-code-btn {
@@ -289,32 +278,25 @@
 }
 
 .code-output {
-    background: var(--card-bg);
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1rem;
-    margin-top: 1rem;
 }
 
 .output-title {
-    color: var(--primary-color);
-    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .output-content {
     color: var(--text-color);
+    background: var(--bg-color);
     margin: 0;
-    min-height: 24px;
-    font-family: 'Consolas', monospace;
-    padding: 1rem;
-    background: var(--card-bg);
-    border-radius: 4px;
-    line-height: 1.4;
-    font-size: 1.1rem;
-}
-
-.output-content span {
-    font-family: 'Consolas', monospace;
+    white-space: pre-wrap;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
 }
 
 /* Quiz text colors */
@@ -337,5 +319,16 @@
 .code-example {
     background: var(--bg-secondary);
     color: var(--text-color);
+}
+
+/* Add these variables to theme.css */
+:root {
+    --code-bg: #1e1e1e;
+    --code-text: #d4d4d4;
+}
+
+[data-theme="dark"] {
+    --code-bg: #1e1e1e;
+    --code-text: #d4d4d4;
 }
  
