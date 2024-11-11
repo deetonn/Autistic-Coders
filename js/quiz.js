@@ -65,8 +65,8 @@ const quizQuestions = [
             <ol>
                 <li>First, javascript interprets the <strong>{}</strong> as a code block, which is empty.</li>
                 <li>Then, <strong>+[]</strong> is whats left, so thats what is evaluated.</li>
-                <li>Because we used the plus operator, javascript will convert the array into a string, which as we saw previously, is <strong>""</strong>.</li>
-                <li>In javascript, an empty string is <strong>falsey</strong>, so the <strong>+</strong> operator converts it to <strong>0</strong>. (as 0 = false, 1 = true)</li>
+                <li>Because we used the plus operator, javascript will convert the array into a number, which, because it is empty, is <strong>0</strong>.</li>
+                <li>Its not zero because its empty either, its zero because an empty array is <strong>falsey</strong>, so the <strong>+</strong> operator converts it to <strong>0</strong>. (as 0 = false, 1 = true)</li>
                 <li>Then we get zero! 🎉</li>
                 <p class="mt-3"><strong>Fun fact:</strong> The language with this horrible logic, is controlling this quiz logic right now 🤣</p>
             </ol>
