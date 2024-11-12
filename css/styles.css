@@ -671,3 +671,62 @@ body {
 .trait-card p {
     color: var(--text-secondary);
 }
+
+/* Alan Turing Legacy Section */
+
+.turing-section {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.turing-portrait-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    padding: 4px;
+}
+
+.achievement-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.turing-quote {
+    font-size: 1.25rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+.turing-legacy li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.turing-legacy i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.achievement-badges .badge {
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
