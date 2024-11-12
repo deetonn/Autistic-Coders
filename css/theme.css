@@ -1,12 +1,12 @@
 /* Theme Variables */
 :root {
     /* Light theme (default) */
-    --primary-color: #3498db;
-    --dark-color: #2c3e50;
+    --primary-color: #2573b3;  /* Darkened from #3498db for better contrast */
+    --dark-color: #2c3e50;     /* Kept as is - good contrast */
     --gradient-start: #2c3e50;
-    --gradient-end: #3498db;
+    --gradient-end: #2573b3;   /* Matched to primary color */
     --bg-color: #ffffff;
-    --text-color: #333333;
+    --text-color: #2d2d2d;     /* Darkened from #333333 for better contrast */
     --card-bg: #ffffff;
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     --navbar-bg: #ffffff;
@@ -18,15 +18,15 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-    --primary-color: #3498db;
-    --dark-color: #ecf0f1;
-    --gradient-start: #1a1a1a;
-    --gradient-end: #2980b9;
-    --bg-color: #1a1a1a;
+    --primary-color: #5daeeb;  /* Lightened from #3498db for better contrast */
+    --dark-color: #ffffff;     /* Changed from #ecf0f1 for better contrast */
+    --gradient-start: #121212; /* Darkened from #1a1a1a for better contrast */
+    --gradient-end: #5daeeb;   /* Matched to primary color */
+    --bg-color: #121212;       /* Darkened from #1a1a1a */
     --text-color: #ffffff;
-    --card-bg: #2d2d2d;
+    --card-bg: #1e1e1e;        /* Darkened from #2d2d2d */
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    --navbar-bg: #1a1a1a;
+    --navbar-bg: #121212;
     --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     --header-bg: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     --header-text: #ffffff;
