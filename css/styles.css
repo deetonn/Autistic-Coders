@@ -110,7 +110,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: var(--header-bg);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -201,7 +201,7 @@ body {
 
 .brand-text {
     background: var(--header-bg);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
