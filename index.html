@@ -336,7 +336,7 @@
                 <div class="col-sm-6 col-lg-4">
                     <h3 class="h6 mb-3">Stay Updated</h3>
                     <p>Join our newsletter for coding tips and resources.</p>
-                    <form class="newsletter-form" action="/subscribe" method="POST">
+                    <form class="newsletter-form" id="newsletterForm">
                         <div class="input-group">
                             <label for="emailSubscribe" class="visually-hidden">Email address</label>
                             <input type="email" 
@@ -351,6 +351,7 @@
                             </button>
                         </div>
                         <small id="emailHelp" class="form-text">We'll never share your email. Unsubscribe anytime.</small>
+                        <div id="newsletterMessage" class="mt-2" role="alert"></div>
                     </form>
                 </div>
             </div>
