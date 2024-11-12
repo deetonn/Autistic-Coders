@@ -9,3 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// cheeky
+document.getElementById('currentYear').textContent = new Date().getFullYear();

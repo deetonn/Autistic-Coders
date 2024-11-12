@@ -730,3 +730,72 @@ body {
     padding: 0.5rem 1rem;
     font-weight: 500;
 }
+
+/* Footer Styles */
+.footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-brand .brand-icon {
+    font-size: 1.5rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: var(--primary-color);
+}
+
+.newsletter-form .input-group {
+    max-width: 400px;
+}
+
+.newsletter-form .form-control {
+    border-radius: 0.375rem 0 0 0.375rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.newsletter-form .btn {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .footer-bottom {
+    background-color: rgba(255, 255, 255, 0.05);
+}
