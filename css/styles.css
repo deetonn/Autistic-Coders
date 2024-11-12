@@ -110,7 +110,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: var(--header-bg);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -201,7 +201,7 @@ body {
 
 .brand-text {
     background: var(--header-bg);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -670,4 +670,152 @@ body {
 
 .trait-card p {
     color: var(--text-secondary);
+}
+
+/* Alan Turing Legacy Section */
+
+.turing-section {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.turing-portrait-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    padding: 4px;
+}
+
+.achievement-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.turing-quote {
+    font-size: 1.25rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+.turing-legacy li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.turing-legacy i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.achievement-badges .badge {
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-brand .brand-icon {
+    font-size: 1.5rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: var(--primary-color);
+}
+
+.newsletter-form .input-group {
+    max-width: 400px;
+}
+
+.newsletter-form .form-control {
+    border-radius: 0.375rem 0 0 0.375rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.newsletter-form .form-control::placeholder {
+    color: var(--text-color);
+    opacity: 0.7; /* Better visibility while still appearing as a placeholder */
+}
+
+/* Form text help message */
+.form-text {
+    color: var(--text-color) !important; /* Override Bootstrap's default color */
+    opacity: 0.9; /* Keep it slightly dimmed but still very readable */
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text in dark mode */
+}
+
+[data-theme="dark"] .form-text {
+    color: rgba(255, 255, 255, 0.9) !important; /* Lighter help text in dark mode */
+}
+
+.newsletter-form .btn {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .footer-bottom {
+    background-color: rgba(255, 255, 255, 0.05);
 }
