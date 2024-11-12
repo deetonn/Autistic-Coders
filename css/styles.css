@@ -786,6 +786,26 @@ body {
     color: var(--text-color);
 }
 
+.newsletter-form .form-control::placeholder {
+    color: var(--text-color);
+    opacity: 0.7; /* Better visibility while still appearing as a placeholder */
+}
+
+/* Form text help message */
+.form-text {
+    color: var(--text-color) !important; /* Override Bootstrap's default color */
+    opacity: 0.9; /* Keep it slightly dimmed but still very readable */
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text in dark mode */
+}
+
+[data-theme="dark"] .form-text {
+    color: rgba(255, 255, 255, 0.9) !important; /* Lighter help text in dark mode */
+}
+
 .newsletter-form .btn {
     border-radius: 0 0.375rem 0.375rem 0;
 }
