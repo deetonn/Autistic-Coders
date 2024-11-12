@@ -235,3 +235,36 @@ AI helped me to figure this out quicker.
 3. **Content**
    - More pioneer profiles
    - Additional learning resources
+
+### Recent Updates
+
+#### Alan Turing Legacy Section
+- Added a dedicated section highlighting Alan Turing's contributions to computer science
+- Features a picture of him
+- Includes notable quotes and autistic traits that influenced his work
+- Responsive design with subtle hover effects
+- Accessible content structure with proper heading hierarchy
+
+#### Footer Implementation
+- Added a responsive, three-column footer design, because I think 3-column looks the best.
+- Features:
+  - Brand section with social media links (They dont actually link to real accounts, but they do open in new tabs)
+  - Quick navigation links for easy access to the pages
+  - Newsletter signup form, without any functionality.
+- Accessibility features:
+  - ARIA labels for all interactive elements
+  - Proper color contrast in both light and dark modes
+  - Semantic HTML structure
+- Dark mode support with optimized text contrast
+- Automatic copyright year update
+
+#### Style Updates
+- Enhanced color contrast for better accessibility
+- Added new CSS variables for footer elements
+- Improved form element visibility in dark mode
+- Added hover effects for interactive elements
+- Optimized responsive breakpoints for mobile devices
+
+#### Performance Optimizations
+- Proper semantic structure for SEO
+- Lightweight implementation of footer with minimal JavaScript
