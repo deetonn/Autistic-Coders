@@ -47,7 +47,7 @@ This page is dedicated to some resources that others may find useful. This inclu
 
 #### 🎮 The quiz page
 
-This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https://www.youtube.com/watch?v=aXOChLn5ZdQ). I've done lots of research into the caveats of JavaScript, and have followed [Andreas Kling](https://www.youtube.com/@AndreasKling) for a while, while he builds his own browser. [LadyBird Browser](https://www.ladybird.org/) is a great project, and I've learned a lot from watching him.
+This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https://www.youtube.com/watch?v=aXOChLn5ZdQ). I've done lots of research into the caveats of JavaScript, and have followed [Andreas Kling](https://www.youtube.com/c/andreaskling) for a while, while he builds his own browser (Ladybird). [LadyBird Browser](https://www.ladybird.org/) is a great project, and I've learned a lot from watching him.
 
 ### Design Philosophy
 
