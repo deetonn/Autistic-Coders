@@ -105,11 +105,11 @@ This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https:/
 
 5. **W3C HTML Validator**
    - Passed with no errors
-   - ![W3C HTML Validator](https://github.com/deetonn/autistic-coders/blob/main/documentation/w3c-html-validator.png)
+   - ![W3C HTML Validator](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/w3c-html-validator.png)
 
 6. **W3C CSS Validator**
    - Passed with no errors
-   - ![W3C CSS Validator](https://github.com/deetonn/autistic-coders/blob/main/documentation/w3c-css-validator.png)
+   - ![W3C CSS Validator](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/w3c-css-validator.png)
 
 ### 🐛 Known Bugs
 
