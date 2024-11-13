@@ -296,256 +296,256 @@
                 </div>
             </div>
         </section>
-        <section id="quiz">
-                <!-- Quiz Header -->
-    <header class="hero-section text-center py-5">
-        <div class="container">
-            <h1 class="display-4">JavaScript Mind-Boggle Quiz</h1>
-            <p class="lead">Can you predict these JavaScript quirks?</p>
-            <p class="lead">Please note, the order is randomized each time you take the quiz. (No cheating!)</p>
-        </div>
-    </header>
 
-    <!-- Quiz Content -->
-    <main class="container my-5">
-        <div class="quiz-container">
-            <div class="question-card mb-4">
-                <h2 class="question-text mb-4"></h2>
-                <div class="code-block">
-                    <pre><code class="language-javascript">
-                    </code></pre>
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <header class="hero-section text-center py-5">
+                <div class="container">
+                    <h1 class="display-4">JavaScript Mind-Boggle Quiz</h1>
+                    <p class="lead">Can you predict these JavaScript quirks?</p>
+                    <p class="lead">Please note, the order is randomized each time you take the quiz. (No cheating!)</p>
                 </div>
-                <div class="answers mt-4">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="a">
-                                Answer A
-                            </button>
+            </header>
+
+            <div class="container">
+                <div class="quiz-container">
+                    <div class="question-card mb-4">
+                        <h2 class="question-text mb-4"></h2>
+                        <div class="code-block">
+                            <pre><code class="language-javascript"></code></pre>
                         </div>
-                        <div class="col-md-6">
-                            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="b">
-                                Answer B
-                            </button>
+                        <div class="answers mt-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 answer-btn" data-answer="a">
+                                        Answer A
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 answer-btn" data-answer="b">
+                                        Answer B
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 answer-btn" data-answer="c">
+                                        Answer C
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 answer-btn" data-answer="d">
+                                        Answer D
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="c">
-                                Answer C
-                            </button>
+                        <div class="explanation mt-4 d-none">
+                            <!-- Explanation will appear here after answering -->
                         </div>
-                        <div class="col-md-6">
-                            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="d">
-                                Answer D
-                            </button>
+                        <div class="try-it-yourself mt-4 d-none">
+                            <h3 class="try-it-title">Try it yourself! 🚀</h3>
+                            <div class="code-playground">
+                                <div class="code-editor">
+                                    <pre><code class="language-javascript" contenteditable="true"></code></pre>
+                                </div>
+                                <button class="btn btn-success run-code-btn">
+                                    <i class="bi bi-play-fill"></i> Run Code
+                                </button>
+                                <div class="code-output mt-3">
+                                    <div class="output-title">Output:</div>
+                                    <pre class="output-content"></pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="explanation mt-4 d-none">
-                    <!-- Explanation will appear here after answering -->
-                </div>
-                <div class="try-it-yourself mt-4 d-none">
-                    <h3 class="try-it-title">Try it yourself! 🚀</h3>
-                    <div class="code-playground">
-                        <div class="code-editor">
-                            <pre><code class="language-javascript" contenteditable="true"></code></pre>
-                        </div>
-                        <button class="btn btn-success run-code-btn">
-                            <i class="bi bi-play-fill"></i> Run Code
+                    
+                    <div class="quiz-navigation mt-4 d-flex justify-content-between">
+                        <button class="btn btn-outline-primary btn-lg" id="prevQuestion" style="display: none;">
+                            <i class="bi bi-arrow-left"></i> Previous
                         </button>
-                        <div class="code-output mt-3">
-                            <div class="output-title">Output:</div>
-                            <pre class="output-content"></pre>
+                        <button class="btn btn-primary btn-lg" id="nextQuestion" style="display: none;">
+                            Next <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <div class="resource-header">
+                <div class="header-background"></div>
+                <div class="container position-relative">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="header-content">
+                                <h1 class="display-4 mb-4 fw-bold">
+                                    Tools for Success
+                                    <span class="header-highlight d-block">Curated for Neurodivergent Minds</span>
+                                </h1>
+                                <p class="lead mb-4">
+                                    Discover carefully selected resources that support your learning journey, 
+                                    with considerations for different learning styles and sensory preferences.
+                                </p>
+                                <div class="resource-stats">
+                                    <div class="row g-4 justify-content-center">
+                                        <div class="col-auto">
+                                            <div class="stat-item">
+                                                <i class="bi bi-laptop"></i>
+                                                <span>Learning Platforms</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="stat-item">
+                                                <i class="bi bi-gear"></i>
+                                                <span>Development Tools</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="stat-item">
+                                                <i class="bi bi-people"></i>
+                                                <span>Community Support</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="quiz-navigation mt-4 d-flex justify-content-between">
-                <button class="btn btn-outline-primary btn-lg" id="prevQuestion" style="display: none;">
-                    <i class="bi bi-arrow-left"></i> Previous
-                </button>
-                <button class="btn btn-primary btn-lg" id="nextQuestion" style="display: none;">
-                    Next <i class="bi bi-arrow-right"></i>
-                </button>
-            </div>
-        </div>
-        </section>
-
-        <section id="resources">
-                <!-- Resources Header -->
-    <section class="resource-header">
-        <div class="header-background"></div>
-        <div class="container position-relative">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <div class="header-content">
-                        <h1 class="display-4 mb-4 fw-bold">
-                            Tools for Success
-                            <span class="header-highlight d-block">Curated for Neurodivergent Minds</span>
-                        </h1>
-                        <p class="lead mb-4">
-                            Discover carefully selected resources that support your learning journey, 
-                            with considerations for different learning styles and sensory preferences.
-                        </p>
-                        <div class="resource-stats">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-auto">
-                                    <div class="stat-item">
-                                        <i class="bi bi-laptop"></i>
-                                        <span>Learning Platforms</span>
+            <div class="resource-content py-5">
+                <div class="container">
+                    <!-- Learning Platforms -->
+                    <div class="resource-category mb-5">
+                        <h2 class="mb-4">
+                            <i class="bi bi-laptop"></i>
+                            Learning Platforms
+                        </h2>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-code-square"></i>
                                     </div>
+                                    <h3>freeCodeCamp</h3>
+                                    <p>Self-paced learning with clear, structured lessons and immediate feedback. Perfect for focused, independent learning.</p>
+                                    <a href="https://www.freecodecamp.org/" class="btn btn-outline-primary" target="_blank">
+                                        Visit FreeCodeCamp here <i class="bi bi-arrow-right"></i>
+                                    </a>
                                 </div>
-                                <div class="col-auto">
-                                    <div class="stat-item">
-                                        <i class="bi bi-gear"></i>
-                                        <span>Development Tools</span>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-play-circle"></i>
                                     </div>
+                                    <h3>The Odin Project</h3>
+                                    <p>Clear, structured path to web development with detailed instructions and community support.</p>
+                                    <a href="https://www.theodinproject.com/" class="btn btn-outline-primary" target="_blank">
+                                        Visit The Odin Project here <i class="bi bi-arrow-right"></i>
+                                    </a>
                                 </div>
-                                <div class="col-auto">
-                                    <div class="stat-item">
-                                        <i class="bi bi-people"></i>
-                                        <span>Community Support</span>
+                            </div>
+                            <div class="col-md-6 col-lg-4"> 
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-code-square"></i>
                                     </div>
+                                    <h3>Fireship</h3>
+                                    <p>Light-hearted, fast-paced coding tutorials for beginners. Great for visual learners.</p>
+                                    <a href="https://www.youtube.com/@fireship" class="btn btn-outline-primary" target="_blank">
+                                        Visit The Fireship Youtube Channel <i class="bi bi-youtube"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Resource Categories -->
-    <section class="resource-content py-5">
-        <div class="container">
-            <!-- Learning Platforms -->
-            <div class="resource-category mb-5">
-                <h2 class="mb-4">
-                    <i class="bi bi-laptop"></i>
-                    Learning Platforms
-                </h2>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-code-square"></i>
+                    <!-- Sensory-Friendly Tools -->
+                    <div class="resource-category mb-5">
+                        <h2 class="mb-4">
+                            <i class="bi bi-gear"></i>
+                            Sensory-Friendly Tools
+                        </h2>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-moon-stars"></i>
+                                    </div>
+                                    <h3>Dark Reader</h3>
+                                    <p>Browser extension for automatic dark mode on all websites. Reduces eye strain and sensory overload.</p>
+                                    <a href="https://darkreader.org/" class="btn btn-outline-primary" target="_blank">
+                                        Learn More about Dark Reader <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <h3>freeCodeCamp</h3>
-                            <p>Self-paced learning with clear, structured lessons and immediate feedback. Perfect for focused, independent learning.</p>
-                            <a href="https://www.freecodecamp.org/" class="btn btn-outline-primary" target="_blank">
-                                Visit FreeCodeCamp here <i class="bi bi-arrow-right"></i>
-                            </a>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-book"></i>
+                                    </div>
+                                    <h3>Browser Tools</h3>
+                                    <p>Most browsers have built-in tools to make reading easier, just right click and press "Open in Reading Mode".</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-headset"></i>
+                                    </div>
+                                    <h3>Listen to music</h3>
+                                    <p>Music can be soothing, but it can also be overwhelming. Try to find music that is not too loud and is instrumental only.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-play-circle"></i>
-                            </div>
-                            <h3>The Odin Project</h3>
-                            <p>Clear, structured path to web development with detailed instructions and community support.</p>
-                            <a href="https://www.theodinproject.com/" class="btn btn-outline-primary" target="_blank">
-                                Visit The Odin Project here <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4"> 
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-code-square"></i>
-                            </div>
-                            <h3>Fireship</h3>
-                            <p>Light-hearted, fast-paced coding tutorials for beginners. Great for visual learners.</p>
-                            <a href="https://www.youtube.com/@fireship" class="btn btn-outline-primary" target="_blank">
-                                Visit The Fireship Youtube Channel <i class="bi bi-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Sensory-Friendly Tools -->
-            <div class="resource-category mb-5">
-                <h2 class="mb-4">
-                    <i class="bi bi-gear"></i>
-                    Sensory-Friendly Tools
-                </h2>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-moon-stars"></i>
+                    <!-- Community Support -->
+                    <div class="resource-category mb-5">
+                        <h2 class="mb-4">
+                            <i class="bi bi-people"></i>
+                            Community Support
+                        </h2>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-discord"></i>
+                                    </div>
+                                    <h3>Neurodivergent in Tech</h3>
+                                    <p>A supportive Discord community for neurodivergent tech professionals and learners.</p>
+                                    <a href="https://discord.gg/neurodiversity-in-tech" class="btn btn-outline-primary" target="_blank">
+                                        Join The Discord Community <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <h3>Dark Reader</h3>
-                            <p>Browser extension for automatic dark mode on all websites. Reduces eye strain and sensory overload.</p>
-                            <a href="https://darkreader.org/" class="btn btn-outline-primary" target="_blank">
-                                Learn More about Dark Reader <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-book"></i>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-reddit"></i>
+                                    </div>
+                                    <h3>Reddit</h3>
+                                    <p class="text-content">A community of people who are interested in technology and neurodiversity.</p>
+                                    <a href="https://www.reddit.com/r/ASD_Programmers/" class="btn btn-outline-primary" target="_blank">
+                                        Visit The Reddit Community <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <h3>Browser Tools</h3>
-                            <p>Most browsers have built-in tools to make reading easier, just right click and press "Open in Reading Mode".</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-headset"></i>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="bi bi-tree-fill"></i>
+                                    </div>
+                                    <h3>Speak to others and connect with nature</h3>
+                                    <p>Talking to others can be overwhelming, but it can also be helpful. Try to find a local support group, and spent time outside.</p>
+                                </div>
                             </div>
-                            <h3>Listen to music</h3>
-                            <p>Music can be soothing, but it can also be overwhelming. Try to find music that is not too loud and is instrumental only.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Community Support -->
-            <div class="resource-category mb-5">
-                <h2 class="mb-4">
-                    <i class="bi bi-people"></i>
-                    Community Support
-                </h2>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-discord"></i>
-                            </div>
-                            <h3>Neurodivergent in Tech</h3>
-                            <p>A supportive Discord community for neurodivergent tech professionals and learners.</p>
-                            <a href="https://discord.gg/neurodiversity-in-tech" class="btn btn-outline-primary" target="_blank">
-                                Join The Discord Community <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-reddit"></i>
-                            </div>
-                            <h3>Reddit</h3>
-                            <p class="text-content">A community of people who are interested in technology and neurodiversity.</p>
-                            <a href="https://www.reddit.com/r/ASD_Programmers/" class="btn btn-outline-primary" target="_blank">
-                                Visit The Reddit Community <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="bi bi-tree-fill"></i>
-                            </div>
-                            <h3>Speak to others and connect with nature</h3>
-                            <p>Talking to others can be overwhelming, but it can also be helpful. Try to find a local support group, and spent time outside.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
     </main>
 
