@@ -104,6 +104,25 @@ This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https:/
 
 ### Technical Implementation
 
+#### W3 HTML Validator
+
+The initial results revealed a few errors, but they were all fixed.
+
+```
+Document checking completed. No errors or warnings to show.
+
+Used the HTML parser. Externally specified character encoding was utf-8.
+
+Total execution time 23 milliseconds.
+```
+
+#### W3 CSS Validator
+
+`styles.css` passed with no errors.
+`quiz.css` passed with no errors.
+`resources.css` passed with no errors.
+`style.css` passed with no errors.
+
 #### CSS Architecture
 - Separate stylesheets for different purposes:
   - `styles.css`: Core styles and shared components such as the navbar, cards and buttons.
