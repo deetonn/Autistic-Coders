@@ -47,7 +47,7 @@ This page is dedicated to some resources that others may find useful. This inclu
 
 #### 🎮 The quiz page
 
-This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https://www.youtube.com/watch?v=aXOChLn5ZdQ). I've done lots of research into the caveats of JavaScript, and have followed [Andreas Kling](https://www.youtube.com/@AndreasKling) for a while, while he builds his own browser. [LadyBird Browser](https://www.ladybird.org/) is a great project, and I've learned a lot from watching him.
+This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https://www.youtube.com/watch?v=aXOChLn5ZdQ). I've done lots of research into the caveats of JavaScript, and have followed [Andreas Kling](https://www.youtube.com/c/andreaskling) for a while, while he builds his own browser (Ladybird). [LadyBird Browser](https://www.ladybird.org/) is a great project, and I've learned a lot from watching him.
 
 ### Design Philosophy
 
@@ -110,6 +110,12 @@ This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https:/
 6. **W3C CSS Validator**
    - Passed with no errors
    - ![W3C CSS Validator](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/w3c-css-validator.png)
+
+7. **WCAG Accessibility**
+   - Dark mode has no contrast issues
+   - ![WCAG Accessibility Dark](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/wcag-dark.png)
+   - Light mode has contrast issues. The reason for this is the gradient, which is used for the background. I didn't adjust this, which I should have.
+   - ![WCAG Accessibility Light](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/wcag-light.png)
 
 ### 🐛 Known Bugs
 
@@ -174,6 +180,16 @@ AI helped me to figure this out quicker.
 3. **Content**
    - More pioneer profiles
    - Additional learning resources
+
+### AI Usage Disclosure
+
+Different language models, such as ChatGPT and claude-3.5-sonnet were used to help with certain aspects of the project.
+
+These are things like advanced CSS styling, like gradient backgrounds and keyframe animations.
+
+Some of the content was discovered via the usage of AI too, like the pioneer profiles.
+
+I have worked and studied the content generated, to ensure that no biases were introduced.
 
 ### 📝 Recent Updates
 
