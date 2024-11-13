@@ -62,31 +62,31 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section text-center py-5" id="top">
-        <div class="container">
-            <h1 class="display-4">Learning about Autism in Programming</h1>
-            <p class="lead">Discovering how unique minds create amazing code</p>
-            
-            <!-- New Quiz CTA -->
-            <div class="quiz-cta mt-4">
-                <div class="quiz-badge">
-                    <span class="badge bg-light text-dark p-2">🧩 JavaScript Quiz</span>
-                </div>
-                <h2 class="h4 text-light mt-3">Ready for a Mind-Bending Challenge?</h2>
-                <p class="text-light mb-4">Test your JavaScript knowledge with our brain-teasing puzzles!</p>
-                <a href="#quiz" class="btn btn-light btn-lg">
-                    Try the Quiz!
-                </a>
-            </div>
-        </div>
-    </header>
-
     <!-- Main Content -->
-    <main class="container my-5">
+    <main>
+        <!-- Hero Section -->
+        <header class="hero-section" id="top">
+            <div class="container">
+                <h1 class="display-4">Learning about Autism in Programming</h1>
+                <p class="lead">Discovering how unique minds create amazing code</p>
+                
+                <!-- New Quiz CTA -->
+                <div class="quiz-cta mt-4">
+                    <div class="quiz-badge">
+                        <span class="badge bg-light text-dark p-2">🧩 JavaScript Quiz</span>
+                    </div>
+                    <h2 class="h4 text-light mt-3">Ready for a Mind-Bending Challenge?</h2>
+                    <p class="text-light mb-4">Test your JavaScript knowledge with our brain-teasing puzzles!</p>
+                    <a href="#quiz" class="btn btn-light btn-lg">
+                        Try the Quiz!
+                    </a>
+                </div>
+            </div>
+        </header>
+
         <!-- Introduction Section -->
-        <section class="row mb-5" id="introduction">
-            <div class="col-lg-8 mx-auto">
+        <section id="introduction">
+            <div class="container">
                 <div class="section-header">
                     <h2>Why Programming and Autism Work So Well Together</h2>
                     <p class="lead">Many autistic individuals excel in programming because it combines logical thinking, pattern recognition, and attention to detail - strengths that often come naturally to autistic minds.</p>
@@ -105,9 +105,9 @@
             </div>
         </section>
 
-        <!-- Why Autistic Minds Excel in Programming -->
-        <section class="row mb-5">
-            <div class="col-12">
+        <!-- Why Autistic Minds Excel Section -->
+        <section id="traits">
+            <div class="container">
                 <div class="section-header">
                     <h2>The Natural Connection</h2>
                     <p class="lead">Discover how autistic traits create unique advantages in the world of programming</p>
@@ -154,8 +154,8 @@
             </div>
         </section>
 
-        <!-- Alan Turing Legacy Section -->
-        <section class="turing-section py-5 mb-5">
+        <!-- Alan Turing Section -->
+        <section id="turing" class="turing-section">
             <div class="container">
                 <!-- Header with smaller image -->
                 <div class="text-center mb-5">
@@ -236,8 +236,8 @@
             </div>
         </section>
 
-        <!-- Featured Pioneers Section -->
-        <section class="pioneers-section py-5">
+        <!-- Pioneers Section -->
+        <section id="pioneers" class="pioneers-section">
             <div class="container">
                 <div class="section-header">
                     <h2>Pioneers in Programming</h2>
@@ -301,15 +301,13 @@
 
         <!-- Quiz Section -->
         <section id="quiz">
-            <header class="hero-section text-center py-5">
-                <div class="container">
+            <div class="container">
+                <div class="section-header">
                     <h2 class="display-4">JavaScript Mind-Boggle Quiz</h2>
                     <p class="lead">Can you predict these JavaScript quirks?</p>
-                    <p class="lead">Please note, the order is randomized each time you take the quiz. (No cheating!)</p>
+                    <p class="text-muted">Please note, the order is randomized each time you take the quiz. (No cheating!)</p>
                 </div>
-            </header>
-
-            <div class="container">
+                
                 <div class="quiz-container">
                     <div class="question-card mb-4">
                         <h2 class="question-text mb-4">Placeholder, Javascript will inject here</h2>
@@ -374,50 +372,16 @@
 
         <!-- Resources Section -->
         <section id="resources">
-            <div class="resource-header">
-                <div class="header-background"></div>
-                <div class="container position-relative">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 text-center">
-                            <div class="header-content">
-                                <h2 class="display-4 mb-4 fw-bold">
-                                    Tools for Success
-                                    <span class="header-highlight d-block">Curated for Neurodivergent Minds</span>
-                                </h2>
-                                <p class="lead mb-4">
-                                    Discover carefully selected resources that support your learning journey, 
-                                    with considerations for different learning styles and sensory preferences.
-                                </p>
-                                <div class="resource-stats">
-                                    <div class="row g-4 justify-content-center">
-                                        <div class="col-auto">
-                                            <div class="stat-item">
-                                                <i class="bi bi-laptop"></i>
-                                                <span>Learning Platforms</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="stat-item">
-                                                <i class="bi bi-gear"></i>
-                                                <span>Development Tools</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="stat-item">
-                                                <i class="bi bi-people"></i>
-                                                <span>Community Support</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="display-4">Tools for Success</h2>
+                    <p class="lead">Curated for Neurodivergent Minds</p>
+                    <p class="text-muted">Discover carefully selected resources that support your learning journey, 
+                        with considerations for different learning styles and sensory preferences.</p>
                 </div>
-            </div>
-            
-            <div class="resource-content py-5">
-                <div class="container">
+
+                <!-- Resource Categories -->
+                <div class="resource-content">
                     <!-- Learning Platforms -->
                     <div class="resource-category mb-5">
                         <h2 class="mb-4">

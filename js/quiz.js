@@ -336,26 +336,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Event Listeners
+    nextButton.addEventListener('click', handleNextQuestion);
+    prevButton.addEventListener('click', handlePreviousQuestion);
+    
+    // Answer button listeners
     answerButtons.forEach((button, index) => {
         button.addEventListener('click', () => handleAnswer(index));
     });
 
-    nextButton.addEventListener('click', () => {
+    function handleNextQuestion() {
         if (quizState.currentQuestion < quizQuestions.length - 1) {
             quizState.currentQuestion++;
             loadQuestion(quizState.currentQuestion);
+            // Scroll to quiz section
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
         } else {
-            // Handle quiz completion
             showResults();
         }
-    });
+    }
 
-    prevButton.addEventListener('click', () => {
+    function handlePreviousQuestion() {
         if (quizState.currentQuestion > 0) {
             quizState.currentQuestion--;
             loadQuestion(quizState.currentQuestion);
+            // Scroll to quiz section
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
         }
-    });
+    }
 
     // Safe eval function
     function safeEval(code) {
@@ -394,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2 class="text-center mb-4">Quiz Complete!</h2>
             <p class="lead text-center">You scored ${quizState.score} out of ${quizQuestions.length} (${percentage}%)</p>
             <div class="text-center mt-4">
-                <button class="btn btn-primary" onclick="location.reload()">Try Again</button>
+                <button class="btn btn-primary" onclick="resetQuiz()">Try Again</button>
             </div>
         `;
     }
