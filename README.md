@@ -4,9 +4,9 @@ A website dedicated to celebrating and supporting autistic programmers, highligh
 
 ## 📌 Quick Links
 - [Live Site](https://deetonn.github.io/autistic-coders/)
-- [Features](#features)
-- [Testing](#testing)
-- [Recent Updates](#recent-updates)
+- [Features](https://github.com/deetonn/autistic-coders?tab=readme-ov-file#-features)
+- [Testing](https://github.com/deetonn/autistic-coders?tab=readme-ov-file#-testing)
+- [Recent Updates](https://github.com/deetonn/autistic-coders?tab=readme-ov-file#-recent-updates)
 
 ## 🎯 Project Overview
 
