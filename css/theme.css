@@ -18,11 +18,11 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-    --primary-color: #5daeeb;  /* Lightened from #3498db for better contrast */
-    --dark-color: #ffffff;     /* Changed from #ecf0f1 for better contrast */
-    --gradient-start: #121212; /* Darkened from #1a1a1a for better contrast */
+    --primary-color: #5daeeb;  /* Lightened from #2573b3 for better contrast */
+    --dark-color: #ffffff;     /* Changed from #2c3e50 for better contrast */
+    --gradient-start: #121212; /* Darkened from #2c3e50 for better contrast */
     --gradient-end: #5daeeb;   /* Matched to primary color */
-    --bg-color: #121212;       /* Darkened from #1a1a1a */
+    --bg-color: #121212;       /* Darkened from #ffffff */
     --text-color: #ffffff;
     --card-bg: #1e1e1e;        /* Darkened from #2d2d2d */
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
