@@ -74,7 +74,8 @@ This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https:/
   - Consistent placement of the navigation buttons and icons
   - The navbar highlights the current page
 
-![Wireframe of the website](https://share.balsamiq.com/c/3pJbm6g1hoRxi9j8kP6MMA.jpg)
+![Wireframe of the website desktop](https://share.balsamiq.com/c/3pJbm6g1hoRxi9j8kP6MMA.jpg)
+![Wireframe of the website mobile](https://share.balsamiq.com/c/mtYBgnksK9BrtECkpuCZd5.jpg)
 
 ### 🧪 Testing
 
