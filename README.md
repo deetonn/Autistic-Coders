@@ -181,6 +181,16 @@ AI helped me to figure this out quicker.
    - More pioneer profiles
    - Additional learning resources
 
+### AI Usage Disclosure
+
+Different language models, such as ChatGPT and claude-3.5-sonnet were used to help with certain aspects of the project.
+
+These are things like advanced CSS styling, like gradient backgrounds and keyframe animations.
+
+Some of the content was discovered via the usage of AI too, like the pioneer profiles.
+
+I have worked and studied the content generated, to ensure that no biases were introduced.
+
 ### 📝 Recent Updates
 
 #### Alan Turing Legacy Section
