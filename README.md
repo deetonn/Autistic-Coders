@@ -111,6 +111,12 @@ This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https:/
    - Passed with no errors
    - ![W3C CSS Validator](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/w3c-css-validator.png)
 
+7. **WCAG Accessibility**
+   - Dark mode has no contrast issues
+   - ![WCAG Accessibility Dark](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/wcag-dark.png)
+   - Light mode has contrast issues. The reason for this is the gradient, which is used for the background. I didn't adjust this, which I should have.
+   - ![WCAG Accessibility Light](https://github.com/deetonn/autistic-coders/blob/main/documentation/images/wcag-light.png)
+
 ### 🐛 Known Bugs
 
 1. **Quiz Page**
