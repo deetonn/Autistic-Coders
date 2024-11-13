@@ -3,10 +3,11 @@
 /* Custom styles */
 .hero-section {
     background: var(--header-bg);
-    padding: 6rem 0;
+    padding: 8rem 0 6rem;
     position: relative;
     overflow: hidden;
     color: var(--header-text);
+    margin-bottom: 0;
 }
 
 .hero-section::before {
@@ -99,6 +100,7 @@ body {
     border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 .trait-card:hover {
@@ -350,6 +352,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--card-shadow);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    margin-bottom: 2rem;
 }
 
 .pioneer-header {
@@ -506,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Section Headers */
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     position: relative;
     padding-bottom: 1.5rem;
 }
@@ -818,4 +821,139 @@ body {
 /* Dark mode adjustments */
 [data-theme="dark"] .footer-bottom {
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Global spacing adjustments */
+section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* Main content container */
+.container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+}
+
+/* Section spacing */
+.section-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+/* Quiz section adjustments */
+#quiz {
+    background-color: var(--bg-secondary);
+    margin-top: 0;
+    padding-top: 6rem;
+}
+
+#quiz .hero-section {
+    padding: 3rem 0;  /* Reduced padding for nested hero */
+}
+
+/* Resources section adjustments */
+#resources {
+    margin-top: 0;
+    padding-top: 6rem;
+}
+
+.resource-header {
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 0;
+    }
+    
+    .hero-section {
+        padding: 6rem 0 4rem;
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    #quiz, #resources {
+        padding-top: 4rem;
+    }
+}
+
+/* Card grid spacing */
+.row.g-4 {
+    --bs-gutter-y: 2rem;
+}
+
+/* Individual card margins */
+.trait-card,
+.pioneer-card,
+.resource-card {
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+/* Last items in grids */
+.row > *:last-child .trait-card,
+.row > *:last-child .pioneer-card,
+.row > *:last-child .resource-card {
+    margin-bottom: 0;
+}
+
+/* Remove the special headers for quiz and resources */
+#quiz .hero-section,
+.resource-header {
+    display: none;
+}
+
+/* Consistent section styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header .display-4 {
+    margin-bottom: 1rem;
+}
+
+.section-header .lead {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+}
+
+.section-header .text-muted {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Section header text colors */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header .lead {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 1rem;
+}
+
+.section-header .text-muted {
+    /* Override Bootstrap's text-muted in dark mode */
+    color: var(--text-secondary) !important;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .section-header .lead,
+[data-theme="dark"] .section-header .text-muted {
+    color: var(--text-secondary) !important;
+    opacity: 0.9;  /* Slightly reduce opacity for better contrast */
 }
