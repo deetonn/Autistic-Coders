@@ -2,11 +2,15 @@
 
 A website dedicated to celebrating and supporting autistic programmers, highlighting the natural connection between autism and coding.
 
-## Project Overview
+## 📌 Quick Links
+- [Live Site](https://deetonn.github.io/autistic-coders/)
+- [Features](#features)
+- [Testing](#testing)
+- [Recent Updates](#recent-updates)
+
+## 🎯 Project Overview
 
 This project aims to create a fun website, with a focus on autistic people in programming. We provide a fun quiz, to make fun of JavaScript, and some resources to help with learning programming.
-
-[Live Site](https://deetonn.github.io/autistic-coders/)
 
 ### User Experience (UX)
 
@@ -27,20 +31,20 @@ This project aims to create a fun website, with a focus on autistic people in pr
    - As a frequent user, I want to test my JavaScript knowledge, and see if there's any new questions.
    - As a frequent user, I want to find community connections
 
-### Features
+### 🎨 Features
 
-#### The home page
+#### 🏠 The home page
 
 Learn about why autism and coding are a good fit. The connections between autism and coding
 are really interesting to me, that's why I chose this topic. 
 
 I chose a few examples of programmers who are autistic, to show that there's success in this field for autistic people, and also to add some relatability to the site.
 
-#### The resources page
+#### 📚 The resources page
 
 This page is dedicated to some resources that others may find useful. This includes learning platforms, tools for making life easier and community support, like a discord group, reddit group and advice on getting out and making real connections.
 
-#### The quiz page
+#### 🎮 The quiz page
 
 This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https://www.youtube.com/watch?v=aXOChLn5ZdQ). I've done lots of research into the caveats of JavaScript, and have followed [Andreas Kling](https://www.youtube.com/@AndreasKling) for a while, while he builds his own browser. [LadyBird Browser](https://www.ladybird.org/) is a great project, and I've learned a lot from watching him.
 
@@ -71,100 +75,7 @@ This is a fun quiz, inspired by [JavaScript, for the haters by Fireship](https:/
 
 ![Wireframe of the website](https://share.balsamiq.com/c/3pJbm6g1hoRxi9j8kP6MMA.jpg)
 
-### Key Features
-
-#### Home Page
-- **Hero Section**: 
-  - A simple, clean introduction
-  - A CTA button, that takes the user to the quiz
-- **Trait Cards**: 
-  - Explains connection between autism and programming
-  - Uses emojis, with a gradient background for a unique look
-  - Organized in a 2x2 grid to make use of all space on desktop.
-  - On mobile, the cards go single file, with a nice animation when they load.
-- **Pioneer Profiles**: 
-  - Provide information about well known autistic programmers
-  - Includes their acheivements, quotes and an image of them (Image is WEBP, to reduce file size)
-  - Simple design, to keep a clear focus on the content.
-
-#### Resources Section
-- **Structured Categories**:
-  - Learning platforms, including freeCodeCamp, The Odin Project and Fireship.
-  - Information about browser tools, to have all websites darkmode, using tools like reading mode and listening to music!
-  - Groups and information about ways to make connections, including discord groups, reddit groups and advice on getting out and making real connections.
-- **Card Design**:
-  - Clear categorization, with different icons for each.
-  - Gentle hover effects, to make it obvious which card the user is hovering over.
-  - Important information prominently displayed
-
-#### JavaScript Quiz
-- **Interactive Learning**:
-  - Hands-on code examples, mainly to mess with the users head (JavaScript is a bit weird)
-  - Immediate feedback, with the answer explained clearly, and a code runner so the user can mess about.
-
-### Technical Implementation
-
-#### W3 HTML Validator
-
-The initial results revealed a few errors, but they were all fixed.
-
-```
-Document checking completed. No errors or warnings to show.
-
-Used the HTML parser. Externally specified character encoding was utf-8.
-
-Total execution time 23 milliseconds.
-```
-
-#### W3 CSS Validator
-
-`styles.css` passed with no errors.
-`quiz.css` passed with no errors.
-`resources.css` passed with no errors.
-`style.css` passed with no errors.
-
-#### CSS Architecture
-- Separate stylesheets for different purposes:
-  - `styles.css`: Core styles and shared components such as the navbar, cards and buttons.
-  - `quiz.css`: Quiz-specific styling
-  - `resources.css`: Resource page specific styles
-
-#### JavaScript Features
-- **Quiz Logic**:
-  - Unsafe code evaluation, which is needed for the quiz answers to work as intended.
-  - State management, to keep track of the users progress.
-  - Progress tracking, so we can show the user how they did at the end.
-
-#### Responsive Design
-- The page can easily be resized, with the content scaling to fit the screen.
-- Touch-friendly interactions, so the user can interact with the page on a mobile device.
-
-### Future Enhancements
-- Dark mode toggle
-- Customizable text size
-- Additional quiz topics
-- More pioneer profiles
-- Expanded resource database
-- Community features
-
-### Accessibility Goals
-- WCAG 2.1 AA compliance (As much as possible) [W3C](https://www.w3.org/TR/WCAG21/)
-- Keyboard navigation (Tab, Shift+Tab, Enter, Space)
-- Screen reader friendly (Using semantic HTML)
-
-### Development Decisions
-- **Bootstrap Framework**:
-  - Provides consistent base styling
-  - Ensures responsive behavior
-  - Familiar to many developers
-- **Custom Styling**:
-  - Enhances default Bootstrap
-  - Adds personality, removing the bootstrap look
-  - Focuses on user comfort
-- **JavaScript**:
-  - Custom javascript was written to handle the quiz logic.
-
-### Testing
+### 🧪 Testing
 
 #### Manual Testing
 
@@ -191,17 +102,15 @@ Total execution time 23 milliseconds.
    - iPhone SE
    - iPad Air
 
-### Known Bugs
+### 🐛 Known Bugs
 
 1. **Quiz Page**
-   - Code execution sometimes shows undefined for certain inputs
    - Quiz progress resets on page refresh
 
 2. **Resources Page**
-   - External links sometimes open in same tab
    - Card animations can stutter on slower devices
 
-### Deployment
+### 🚀 Deployment
 
 The site is deployed on GitHub Pages. The deployment process was:
 
@@ -218,7 +127,7 @@ To run locally:
 2. run `python -m http.server`
 3. Open the browser and navigate to `localhost:8000`
 
-### Credits
+### ✨ Credits
 
 #### Content
 - Pioneer profiles information from [chatgpt.com](https://chatgpt.com)
@@ -244,7 +153,7 @@ However, this did not result in the intended output, as some of the questions re
 
 AI helped me to figure this out quicker.
 
-### Future Features
+### 🎯 Future Features
 
 1. **Enhanced Quiz**
    - Multiple difficulty levels, instead of just ridiculously hard lol.
@@ -257,7 +166,7 @@ AI helped me to figure this out quicker.
    - More pioneer profiles
    - Additional learning resources
 
-### Recent Updates
+### 📝 Recent Updates
 
 #### Alan Turing Legacy Section
 - Added a dedicated section highlighting Alan Turing's contributions to computer science
@@ -289,3 +198,7 @@ AI helped me to figure this out quicker.
 #### Performance Optimizations
 - Proper semantic structure for SEO
 - Lightweight implementation of footer with minimal JavaScript
+
+---
+
+Made with ❤️ by Deeton Rushton
